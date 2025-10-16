@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Runtime\Client;
+namespace App\Generated\PdpFlowClient\Runtime\Client;
 
 use Jane\Component\OpenApiRuntime\Client\Plugin\AuthenticationRegistry;
 use Psr\Http\Client\ClientInterface;

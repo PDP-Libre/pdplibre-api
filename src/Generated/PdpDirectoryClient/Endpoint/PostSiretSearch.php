@@ -1,26 +1,26 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint;
+namespace App\Generated\PdpDirectoryClient\Endpoint;
 
-class PostSiretSearch extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\BaseEndpoint implements \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\Endpoint
+class PostSiretSearch extends \App\Generated\PdpDirectoryClient\Runtime\Client\BaseEndpoint implements \App\Generated\PdpDirectoryClient\Runtime\Client\Endpoint
 {
     protected $accept;
     /**
      * Multi-criteria search for facilities.
      *
-     * @param null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiret $requestBody 
+     * @param null|\App\Generated\PdpDirectoryClient\Model\SearchSiret $requestBody 
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      * }
      * @param array $accept Accept content header application/json|application/problem+json
      */
-    public function __construct(?\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiret $requestBody = null, array $headerParameters = [], array $accept = [])
+    public function __construct(?\App\Generated\PdpDirectoryClient\Model\SearchSiret $requestBody = null, array $headerParameters = [], array $accept = [])
     {
         $this->body = $requestBody;
         $this->headerParameters = $headerParameters;
         $this->accept = $accept;
     }
-    use \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\EndpointTrait;
+    use \App\Generated\PdpDirectoryClient\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'POST';
@@ -31,7 +31,7 @@ class PostSiretSearch extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiret) {
+        if ($this->body instanceof \App\Generated\PdpDirectoryClient\Model\SearchSiret) {
             return [['Content-Type' => ['application/json']], $serializer->serialize($this->body, 'json')];
         }
         return [[], null];
@@ -55,61 +55,61 @@ class PostSiretSearch extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime
     /**
      * {@inheritdoc}
      *
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchBadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchNotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchRequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchUnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchTooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchNotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SiretSearchPost200Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error
+     * @return null|\App\Generated\PdpDirectoryClient\Model\SiretSearchPost200Response|\App\Generated\PdpDirectoryClient\Model\Error
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SiretSearchPost200Response', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\SiretSearchPost200Response', 'json');
         }
         if (is_null($contentType) === false && (206 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SiretSearchPost200Response', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\SiretSearchPost200Response', 'json');
         }
         if (400 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchBadRequestException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchBadRequestException($response);
         }
         if (401 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchUnauthorizedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchUnauthorizedException($response);
         }
         if (403 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchForbiddenException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchForbiddenException($response);
         }
         if (404 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchNotFoundException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchNotFoundException($response);
         }
         if (408 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchRequestTimeoutException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchRequestTimeoutException($response);
         }
         if (422 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchUnprocessableEntityException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchUnprocessableEntityException($response);
         }
         if (429 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchTooManyRequestsException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchTooManyRequestsException($response);
         }
         if (500 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchInternalServerErrorException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchInternalServerErrorException($response);
         }
         if (501 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchNotImplementedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchNotImplementedException($response);
         }
         if (503 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchServiceUnavailableException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchServiceUnavailableException($response);
         }
         if (mb_strpos($contentType, 'application/problem+json') !== false) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\Error', 'json');
         }
     }
     public function getAuthenticationScopes(): array

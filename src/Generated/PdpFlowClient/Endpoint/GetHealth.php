@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Endpoint;
+namespace App\Generated\PdpFlowClient\Endpoint;
 
-class GetHealth extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\BaseEndpoint implements \PdpLibre\Generated\PdpFlowClient\Runtime\Client\Endpoint
+class GetHealth extends \App\Generated\PdpFlowClient\Runtime\Client\BaseEndpoint implements \App\Generated\PdpFlowClient\Runtime\Client\Endpoint
 {
-    use \PdpLibre\Generated\PdpFlowClient\Runtime\Client\EndpointTrait;
+    use \App\Generated\PdpFlowClient\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'GET';
@@ -24,8 +24,8 @@ class GetHealth extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\BaseEnd
     /**
      * {@inheritdoc}
      *
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetHealthInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetHealthServiceUnavailableException
+     * @throws \App\Generated\PdpFlowClient\Exception\GetHealthInternalServerErrorException
+     * @throws \App\Generated\PdpFlowClient\Exception\GetHealthServiceUnavailableException
      *
      * @return null
      */
@@ -37,10 +37,10 @@ class GetHealth extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\BaseEnd
             return null;
         }
         if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\GetHealthInternalServerErrorException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\GetHealthInternalServerErrorException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
         if (is_null($contentType) === false && (503 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\GetHealthServiceUnavailableException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\GetHealthServiceUnavailableException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
     }
     public function getAuthenticationScopes(): array

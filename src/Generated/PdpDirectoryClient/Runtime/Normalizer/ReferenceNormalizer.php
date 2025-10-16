@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Runtime\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;

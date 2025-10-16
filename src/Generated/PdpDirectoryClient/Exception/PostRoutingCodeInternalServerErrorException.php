@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Exception;
+namespace App\Generated\PdpDirectoryClient\Exception;
 
 class PostRoutingCodeInternalServerErrorException extends InternalServerErrorException
 {

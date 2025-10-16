@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client;
+namespace App\Generated\PdpDirectoryClient\Runtime\Client;
 
 use Http\Message\MultipartStream\MultipartStreamBuilder;
 use Psr\Http\Message\ResponseInterface;

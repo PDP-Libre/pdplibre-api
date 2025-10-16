@@ -1,8 +1,8 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint;
+namespace App\Generated\PdpDirectoryClient\Endpoint;
 
-class GetRoutingCodeSiretBySiretCode{routingIdentifier} extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\BaseEndpoint implements \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\Endpoint
+class GetRoutingCodeSiretBySiretCode{routingIdentifier} extends \App\Generated\PdpDirectoryClient\Runtime\Client\BaseEndpoint implements \App\Generated\PdpDirectoryClient\Runtime\Client\Endpoint
 {
     protected $siret;
     protected $routing-identifier;
@@ -30,7 +30,7 @@ class GetRoutingCodeSiretBySiretCode{routingIdentifier} extends \PdpLibre\Genera
         $this->headerParameters = $headerParameters;
         $this->accept = $accept;
     }
-    use \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\EndpointTrait;
+    use \App\Generated\PdpDirectoryClient\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'GET';
@@ -73,58 +73,58 @@ class GetRoutingCodeSiretBySiretCode{routingIdentifier} extends \PdpLibre\Genera
     /**
      * {@inheritdoc}
      *
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}BadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}UnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}ForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}NotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}RequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}UnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}TooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}InternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}NotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}ServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error
+     * @return null|\App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility|\App\Generated\PdpDirectoryClient\Model\Error
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility', 'json');
         }
         if (400 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}BadRequestException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}BadRequestException($response);
         }
         if (401 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}UnauthorizedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}UnauthorizedException($response);
         }
         if (403 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}ForbiddenException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}ForbiddenException($response);
         }
         if (404 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}NotFoundException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}NotFoundException($response);
         }
         if (408 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}RequestTimeoutException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}RequestTimeoutException($response);
         }
         if (422 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}UnprocessableEntityException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}UnprocessableEntityException($response);
         }
         if (429 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}TooManyRequestsException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}TooManyRequestsException($response);
         }
         if (500 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}InternalServerErrorException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}InternalServerErrorException($response);
         }
         if (501 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}NotImplementedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}NotImplementedException($response);
         }
         if (503 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}ServiceUnavailableException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}ServiceUnavailableException($response);
         }
         if (mb_strpos($contentType, 'application/problem+json') !== false) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\Error', 'json');
         }
     }
     public function getAuthenticationScopes(): array

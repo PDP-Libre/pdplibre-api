@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Runtime\Client;
+namespace App\Generated\PdpFlowClient\Runtime\Client;
 
 use Symfony\Component\OptionsResolver\Options;
 interface CustomQueryResolver

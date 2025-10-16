@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -19,11 +19,11 @@ class DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCodeNormaliz
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode::class;
+        return $type === \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode::class;
+        return is_object($data) && get_class($data) === \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
@@ -33,7 +33,7 @@ class DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCodeNormaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode();
+        $object = new \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode();
         if (\array_key_exists('managesLegalCommitment', $data) && \is_int($data['managesLegalCommitment'])) {
             $data['managesLegalCommitment'] = (bool) $data['managesLegalCommitment'];
         }
@@ -61,7 +61,7 @@ class DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCodeNormaliz
             unset($data['administrativeStatus']);
         }
         if (\array_key_exists('address', $data)) {
-            $object->setAddress($this->denormalizer->denormalize($data['address'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\AddressRead::class, 'json', $context));
+            $object->setAddress($this->denormalizer->denormalize($data['address'], \App\Generated\PdpDirectoryClient\Model\AddressRead::class, 'json', $context));
             unset($data['address']);
         }
         foreach ($data as $key => $value) {
@@ -101,6 +101,6 @@ class DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCodeNormaliz
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode::class => false];
+        return [\App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode::class => false];
     }
 }

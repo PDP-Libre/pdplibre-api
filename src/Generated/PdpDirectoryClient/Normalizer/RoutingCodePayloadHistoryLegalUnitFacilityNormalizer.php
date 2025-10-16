@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -19,11 +19,11 @@ class RoutingCodePayloadHistoryLegalUnitFacilityNormalizer implements Denormaliz
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility::class;
+        return $type === \App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility::class;
+        return is_object($data) && get_class($data) === \App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
@@ -33,7 +33,7 @@ class RoutingCodePayloadHistoryLegalUnitFacilityNormalizer implements Denormaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility();
+        $object = new \App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility();
         if (\array_key_exists('managesLegalCommitmentCode', $data) && \is_int($data['managesLegalCommitmentCode'])) {
             $data['managesLegalCommitmentCode'] = (bool) $data['managesLegalCommitmentCode'];
         }
@@ -65,19 +65,19 @@ class RoutingCodePayloadHistoryLegalUnitFacilityNormalizer implements Denormaliz
             unset($data['administrativeStatus']);
         }
         if (\array_key_exists('address', $data)) {
-            $object->setAddress($this->denormalizer->denormalize($data['address'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\AddressRead::class, 'json', $context));
+            $object->setAddress($this->denormalizer->denormalize($data['address'], \App\Generated\PdpDirectoryClient\Model\AddressRead::class, 'json', $context));
             unset($data['address']);
         }
         if (\array_key_exists('history', $data)) {
-            $object->setHistory($this->denormalizer->denormalize($data['history'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\HistoryRead::class, 'json', $context));
+            $object->setHistory($this->denormalizer->denormalize($data['history'], \App\Generated\PdpDirectoryClient\Model\HistoryRead::class, 'json', $context));
             unset($data['history']);
         }
         if (\array_key_exists('legalUnit', $data)) {
-            $object->setLegalUnit($this->denormalizer->denormalize($data['legalUnit'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadIncluded::class, 'json', $context));
+            $object->setLegalUnit($this->denormalizer->denormalize($data['legalUnit'], \App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadIncluded::class, 'json', $context));
             unset($data['legalUnit']);
         }
         if (\array_key_exists('facility', $data)) {
-            $object->setFacility($this->denormalizer->denormalize($data['facility'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadIncluded::class, 'json', $context));
+            $object->setFacility($this->denormalizer->denormalize($data['facility'], \App\Generated\PdpDirectoryClient\Model\FacilityPayloadIncluded::class, 'json', $context));
             unset($data['facility']);
         }
         foreach ($data as $key => $value) {
@@ -129,6 +129,6 @@ class RoutingCodePayloadHistoryLegalUnitFacilityNormalizer implements Denormaliz
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility::class => false];
+        return [\App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility::class => false];
     }
 }

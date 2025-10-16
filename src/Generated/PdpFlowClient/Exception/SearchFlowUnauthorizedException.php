@@ -1,24 +1,24 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Exception;
+namespace App\Generated\PdpFlowClient\Exception;
 
 class SearchFlowUnauthorizedException extends UnauthorizedException
 {
     /**
-     * @var \PdpLibre\Generated\PdpFlowClient\Model\Error
+     * @var \App\Generated\PdpFlowClient\Model\Error
      */
     private $error;
     /**
      * @var \Psr\Http\Message\ResponseInterface
      */
     private $response;
-    public function __construct(\PdpLibre\Generated\PdpFlowClient\Model\Error $error, \Psr\Http\Message\ResponseInterface $response)
+    public function __construct(\App\Generated\PdpFlowClient\Model\Error $error, \Psr\Http\Message\ResponseInterface $response)
     {
         parent::__construct('Error 401 : Authentication error.');
         $this->error = $error;
         $this->response = $response;
     }
-    public function getError(): \PdpLibre\Generated\PdpFlowClient\Model\Error
+    public function getError(): \App\Generated\PdpFlowClient\Model\Error
     {
         return $this->error;
     }

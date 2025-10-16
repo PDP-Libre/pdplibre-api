@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint;
+namespace App\Generated\PdpDirectoryClient\Endpoint;
 
-class GetHealth extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\BaseEndpoint implements \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\Endpoint
+class GetHealth extends \App\Generated\PdpDirectoryClient\Runtime\Client\BaseEndpoint implements \App\Generated\PdpDirectoryClient\Runtime\Client\Endpoint
 {
-    use \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\EndpointTrait;
+    use \App\Generated\PdpDirectoryClient\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'GET';
@@ -20,8 +20,8 @@ class GetHealth extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Clien
     /**
      * {@inheritdoc}
      *
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetHealthInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetHealthServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetHealthInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetHealthServiceUnavailableException
      *
      * @return null
      */
@@ -33,10 +33,10 @@ class GetHealth extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Clien
             return null;
         }
         if (500 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetHealthInternalServerErrorException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetHealthInternalServerErrorException($response);
         }
         if (503 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetHealthServiceUnavailableException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetHealthServiceUnavailableException($response);
         }
     }
     public function getAuthenticationScopes(): array

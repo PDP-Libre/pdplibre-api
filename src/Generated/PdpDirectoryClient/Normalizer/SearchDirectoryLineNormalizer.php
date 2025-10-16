@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -19,11 +19,11 @@ class SearchDirectoryLineNormalizer implements DenormalizerInterface, Normalizer
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLine::class;
+        return $type === \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLine::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLine::class;
+        return is_object($data) && get_class($data) === \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLine::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
@@ -33,18 +33,18 @@ class SearchDirectoryLineNormalizer implements DenormalizerInterface, Normalizer
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLine();
+        $object = new \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLine();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('filters', $data)) {
-            $object->setFilters($this->denormalizer->denormalize($data['filters'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFilters::class, 'json', $context));
+            $object->setFilters($this->denormalizer->denormalize($data['filters'], \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFilters::class, 'json', $context));
             unset($data['filters']);
         }
         if (\array_key_exists('sorting', $data)) {
             $values = [];
             foreach ($data['sorting'] as $value) {
-                $values[] = $this->denormalizer->denormalize($value, \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineSortingInner::class, 'json', $context);
+                $values[] = $this->denormalizer->denormalize($value, \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineSortingInner::class, 'json', $context);
             }
             $object->setSorting($values);
             unset($data['sorting']);
@@ -107,6 +107,6 @@ class SearchDirectoryLineNormalizer implements DenormalizerInterface, Normalizer
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLine::class => false];
+        return [\App\Generated\PdpDirectoryClient\Model\SearchDirectoryLine::class => false];
     }
 }

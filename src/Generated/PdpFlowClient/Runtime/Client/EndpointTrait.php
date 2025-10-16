@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Runtime\Client;
+namespace App\Generated\PdpFlowClient\Runtime\Client;
 
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\Serializer\SerializerInterface;

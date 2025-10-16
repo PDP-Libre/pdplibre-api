@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Runtime\Normalizer;
+namespace App\Generated\PdpFlowClient\Runtime\Normalizer;
 
 use RuntimeException;
 use Symfony\Component\Validator\ConstraintViolationListInterface;

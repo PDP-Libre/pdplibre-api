@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Exception;
+namespace App\Generated\PdpFlowClient\Exception;
 
 class NotFoundException extends \RuntimeException implements ClientException
 {

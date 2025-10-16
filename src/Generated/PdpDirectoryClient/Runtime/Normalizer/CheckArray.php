@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Runtime\Normalizer;
 
 trait CheckArray
 {

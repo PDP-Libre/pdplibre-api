@@ -1,8 +1,8 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient;
+namespace App\Generated\PdpFlowClient;
 
-class Client extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\Client
+class Client extends \App\Generated\PdpFlowClient\Runtime\Client\Client
 {
     /**
     * Submit a flow. A flow is a single-invoice file, with :
@@ -16,22 +16,22 @@ class Client extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\Client
      - or a e-reporting file
     
     *
-    * @param null|\PdpLibre\Generated\PdpFlowClient\Model\V1FlowsPostBody $requestBody 
+    * @param null|\App\Generated\PdpFlowClient\Model\V1FlowsPostBody $requestBody 
     * @param array $headerParameters {
     *     @var string $Request-Id Header parameter used to correlate logs from several components
     * }
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowBadRequestException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowUnauthorizedException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowForbiddenException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowInternalServerErrorException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowServiceUnavailableException
+    * @throws \App\Generated\PdpFlowClient\Exception\CreateFlowBadRequestException
+    * @throws \App\Generated\PdpFlowClient\Exception\CreateFlowUnauthorizedException
+    * @throws \App\Generated\PdpFlowClient\Exception\CreateFlowForbiddenException
+    * @throws \App\Generated\PdpFlowClient\Exception\CreateFlowInternalServerErrorException
+    * @throws \App\Generated\PdpFlowClient\Exception\CreateFlowServiceUnavailableException
     *
-    * @return null|\PdpLibre\Generated\PdpFlowClient\Model\FullFlowInfo|\Psr\Http\Message\ResponseInterface
+    * @return null|\App\Generated\PdpFlowClient\Model\FullFlowInfo|\Psr\Http\Message\ResponseInterface
     */
-    public function createFlow(?\PdpLibre\Generated\PdpFlowClient\Model\V1FlowsPostBody $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    public function createFlow(?\App\Generated\PdpFlowClient\Model\V1FlowsPostBody $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFlowClient\Endpoint\CreateFlow($requestBody, $headerParameters), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpFlowClient\Endpoint\CreateFlow($requestBody, $headerParameters), $fetch);
     }
     /**
     * Retrieves a set of flows matching the provided search criteria:
@@ -45,22 +45,22 @@ class Client extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\Client
      - In the response, the total count of items
     
     *
-    * @param null|\PdpLibre\Generated\PdpFlowClient\Model\SearchFlowParams $requestBody 
+    * @param null|\App\Generated\PdpFlowClient\Model\SearchFlowParams $requestBody 
     * @param array $headerParameters {
     *     @var string $Request-Id Header parameter used to correlate logs from several components
     * }
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\SearchFlowBadRequestException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\SearchFlowUnauthorizedException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\SearchFlowForbiddenException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\SearchFlowInternalServerErrorException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\SearchFlowServiceUnavailableException
+    * @throws \App\Generated\PdpFlowClient\Exception\SearchFlowBadRequestException
+    * @throws \App\Generated\PdpFlowClient\Exception\SearchFlowUnauthorizedException
+    * @throws \App\Generated\PdpFlowClient\Exception\SearchFlowForbiddenException
+    * @throws \App\Generated\PdpFlowClient\Exception\SearchFlowInternalServerErrorException
+    * @throws \App\Generated\PdpFlowClient\Exception\SearchFlowServiceUnavailableException
     *
-    * @return null|\PdpLibre\Generated\PdpFlowClient\Model\SearchFlowContent|\Psr\Http\Message\ResponseInterface
+    * @return null|\App\Generated\PdpFlowClient\Model\SearchFlowContent|\Psr\Http\Message\ResponseInterface
     */
-    public function searchFlow(?\PdpLibre\Generated\PdpFlowClient\Model\SearchFlowParams $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    public function searchFlow(?\App\Generated\PdpFlowClient\Model\SearchFlowParams $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFlowClient\Endpoint\SearchFlow($requestBody, $headerParameters), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpFlowClient\Endpoint\SearchFlow($requestBody, $headerParameters), $fetch);
     }
     /**
     * Download a file related to a given flow:
@@ -82,29 +82,29 @@ class Client extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\Client
     * }
     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
     * @param array $accept Accept content header application/octet-stream|application/json
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowBadRequestException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowUnauthorizedException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowForbiddenException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowNotFoundException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowInternalServerErrorException
-    * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowServiceUnavailableException
+    * @throws \App\Generated\PdpFlowClient\Exception\GetFlowBadRequestException
+    * @throws \App\Generated\PdpFlowClient\Exception\GetFlowUnauthorizedException
+    * @throws \App\Generated\PdpFlowClient\Exception\GetFlowForbiddenException
+    * @throws \App\Generated\PdpFlowClient\Exception\GetFlowNotFoundException
+    * @throws \App\Generated\PdpFlowClient\Exception\GetFlowInternalServerErrorException
+    * @throws \App\Generated\PdpFlowClient\Exception\GetFlowServiceUnavailableException
     *
     * @return null|\Psr\Http\Message\ResponseInterface
     */
     public function getFlow(string $flowId, array $queryParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFlowClient\Endpoint\GetFlow($flowId, $queryParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpFlowClient\Endpoint\GetFlow($flowId, $queryParameters, $accept), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetHealthInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetHealthServiceUnavailableException
+     * @throws \App\Generated\PdpFlowClient\Exception\GetHealthInternalServerErrorException
+     * @throws \App\Generated\PdpFlowClient\Exception\GetHealthServiceUnavailableException
      *
      * @return null|\Psr\Http\Message\ResponseInterface
      */
     public function getHealth(string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFlowClient\Endpoint\GetHealth(), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpFlowClient\Endpoint\GetHealth(), $fetch);
     }
     public static function create($httpClient = null, array $additionalPlugins = [], array $additionalNormalizers = [])
     {
@@ -121,7 +121,7 @@ class Client extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\Client
         }
         $requestFactory = \Http\Discovery\Psr17FactoryDiscovery::findRequestFactory();
         $streamFactory = \Http\Discovery\Psr17FactoryDiscovery::findStreamFactory();
-        $normalizers = [new \Symfony\Component\Serializer\Normalizer\ArrayDenormalizer(), new \PdpLibre\Generated\PdpFlowClient\Normalizer\JaneObjectNormalizer()];
+        $normalizers = [new \Symfony\Component\Serializer\Normalizer\ArrayDenormalizer(), new \App\Generated\PdpFlowClient\Normalizer\JaneObjectNormalizer()];
         if (count($additionalNormalizers) > 0) {
             $normalizers = array_merge($normalizers, $additionalNormalizers);
         }

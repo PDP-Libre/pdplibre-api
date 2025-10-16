@@ -1,34 +1,34 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient;
+namespace App\Generated\PdpDirectoryClient;
 
-class Client extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\Client
+class Client extends \App\Generated\PdpDirectoryClient\Runtime\Client\Client
 {
     /**
      * Multi-criteria company search.
      *
-     * @param null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiren $requestBody 
+     * @param null|\App\Generated\PdpDirectoryClient\Model\SearchSiren $requestBody
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSirenSearchBadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSirenSearchUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSirenSearchForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSirenSearchNotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSirenSearchRequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSirenSearchUnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSirenSearchTooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSirenSearchInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSirenSearchNotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSirenSearchServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSirenSearchBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSirenSearchUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSirenSearchForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSirenSearchNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSirenSearchRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSirenSearchUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSirenSearchTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSirenSearchInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSirenSearchNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSirenSearchServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SirenSearchPost200Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\SirenSearchPost200Response|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function postSirenSearch(?\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiren $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function postSirenSearch(?\App\Generated\PdpDirectoryClient\Model\SearchSiren $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\PostSirenSearch($requestBody, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\PostSirenSearch($requestBody, $headerParameters, $accept), $fetch);
     }
     /**
      * Returns the details of a company (legal unit) identified by the SIREN number passed as a parameter.
@@ -43,22 +43,22 @@ class Client extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\C
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenBadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenNotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenRequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenUnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenTooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenNotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadHistory|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadHistory|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function getSirenCodeInseeBySiren(string $siren, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\GetSirenCodeInseeBySiren($siren, $queryParameters, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\GetSirenCodeInseeBySiren($siren, $queryParameters, $headerParameters, $accept), $fetch);
     }
     /**
      * Returns the details of a company (legal unit) identified by the id-instance passed as a parameter.
@@ -72,48 +72,48 @@ class Client extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\C
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenIdInstance{idInstance}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenIdInstance{idInstance}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenIdInstance{idInstance}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenIdInstance{idInstance}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenIdInstance{idInstance}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenIdInstance{idInstance}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenIdInstance{idInstance}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenIdInstance{idInstance}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenIdInstance{idInstance}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenIdInstance{idInstance}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenIdInstanceBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenIdInstanceUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenIdInstanceForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenIdInstanceNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenIdInstanceRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenIdInstanceUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenIdInstanceTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenIdInstanceInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenIdInstanceNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenIdInstanceServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadHistory|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadHistory|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function getSirenIdInstance{idInstance}(int $idInstance, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function getSirenIdInstance(int $idInstance, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\GetSirenIdInstance{idInstance}($idInstance, $queryParameters, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\GetSirenIdInstance($idInstance, $queryParameters, $headerParameters, $accept), $fetch);
     }
     /**
      * Multi-criteria search for facilities.
      *
-     * @param null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiret $requestBody 
+     * @param null|\App\Generated\PdpDirectoryClient\Model\SearchSiret $requestBody
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchBadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchNotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchRequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchUnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchTooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchNotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostSiretSearchServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostSiretSearchServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SiretSearchPost200Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\SiretSearchPost200Response|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function postSiretSearch(?\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiret $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function postSiretSearch(?\App\Generated\PdpDirectoryClient\Model\SearchSiret $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\PostSiretSearch($requestBody, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\PostSiretSearch($requestBody, $headerParameters, $accept), $fetch);
     }
     /**
      * Returns the details of a facility associated to a SIRET.
@@ -129,22 +129,22 @@ class Client extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\C
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretBadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretNotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretRequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretUnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretTooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretNotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistoryUle|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistoryUle|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
     public function getSiretCodeInseeBySiret(string $siret, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\GetSiretCodeInseeBySiret($siret, $queryParameters, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\GetSiretCodeInseeBySiret($siret, $queryParameters, $headerParameters, $accept), $fetch);
     }
     /**
      * Returns the details of a facility according to an instance-id.
@@ -158,75 +158,75 @@ class Client extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\C
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretIdInstance{idInstance}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretIdInstance{idInstance}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretIdInstance{idInstance}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretIdInstance{idInstance}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretIdInstance{idInstance}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretIdInstance{idInstance}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretIdInstance{idInstance}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretIdInstance{idInstance}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretIdInstance{idInstance}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretIdInstance{idInstance}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretIdInstanceBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretIdInstanceUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretIdInstanceForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretIdInstanceNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretIdInstanceRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretIdInstanceUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretIdInstanceTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretIdInstanceInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretIdInstanceNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretIdInstanceServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistory|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistory|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function getSiretIdInstance{idInstance}(int $idInstance, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function getSiretIdInstance(int $idInstance, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\GetSiretIdInstance{idInstance}($idInstance, $queryParameters, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\GetSiretIdInstance($idInstance, $queryParameters, $headerParameters, $accept), $fetch);
     }
     /**
      * Creating a routing code.
      *
-     * @param \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateRoutingCodeBody $requestBody 
+     * @param \App\Generated\PdpDirectoryClient\Model\CreateRoutingCodeBody $requestBody
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      *     @var array $PPF-affiliations Indicates the user's active affiliations in SIREN/SIRET/Service format. Only the SIREN is mandatory.
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeBadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeNotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeRequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeUnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeTooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeNotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePost201Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\RoutingCodePost201Response|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function postRoutingCode(\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateRoutingCodeBody $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function postRoutingCode(\App\Generated\PdpDirectoryClient\Model\CreateRoutingCodeBody $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\PostRoutingCode($requestBody, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\PostRoutingCode($requestBody, $headerParameters, $accept), $fetch);
     }
     /**
      * Search for routing codes that meet all the criteria passed as parameters and return the routing codes in the desired format.
      *
-     * @param \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearch $requestBody 
+     * @param \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearch $requestBody
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeSearchBadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeSearchUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeSearchForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeSearchNotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeSearchRequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeSearchUnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeSearchTooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeSearchInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeSearchNotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeSearchServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeSearchBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeSearchUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeSearchForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeSearchNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeSearchRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeSearchUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeSearchTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeSearchInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeSearchNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeSearchServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchPost200Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchPost200Response|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function postRoutingCodeSearch(\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearch $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function postRoutingCodeSearch(\App\Generated\PdpDirectoryClient\Model\RoutingCodeSearch $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\PostRoutingCodeSearch($requestBody, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\PostRoutingCodeSearch($requestBody, $headerParameters, $accept), $fetch);
     }
     /**
      * Récupérer les données du Code Routage correspondante à l’identifiant passé en paramètres.
@@ -243,22 +243,22 @@ class Client extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\C
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCode{routingIdentifier}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCodeBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCodeUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCodeForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCodeNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCodeRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCodeUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCodeTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCodeInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCodeNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeSiretBySiretCodeServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function getRoutingCodeSiretBySiretCode{routingIdentifier}(string $siret, string $routingIdentifier, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function getRoutingCodeSiretBySiretCode(string $siret, string $routingIdentifier, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\GetRoutingCodeSiretBySiretCode{routingIdentifier}($siret, $routingIdentifier, $queryParameters, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\GetRoutingCodeSiretBySiretCode($siret, $routingIdentifier, $queryParameters, $headerParameters, $accept), $fetch);
     }
     /**
      * Retrieve the Routing Code data corresponding to the Instance ID.
@@ -272,131 +272,131 @@ class Client extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\C
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstanceBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstanceUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstanceForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstanceNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstanceRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstanceUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstanceTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstanceInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstanceNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstanceServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistory|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistory|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function getRoutingCodeIdInstance{idInstance}(int $idInstance, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function getRoutingCodeIdInstance(int $idInstance, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\GetRoutingCodeIdInstance{idInstance}($idInstance, $queryParameters, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\GetRoutingCodeIdInstance($idInstance, $queryParameters, $headerParameters, $accept), $fetch);
     }
     /**
      * Partially update a private routing code.
      *
      * @param int $idInstance Corresponds to the instance id of a legal unit.
-     * @param \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePatchRoutingCodeBody $requestBody 
+     * @param \App\Generated\PdpDirectoryClient\Model\UpdatePatchRoutingCodeBody $requestBody
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      *     @var array $PPF-affiliations Indicates the user's active affiliations in SIREN/SIRET/Service format. Only the SIREN is mandatory.
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchRoutingCodeIdInstance{idInstance}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchRoutingCodeIdInstance{idInstance}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchRoutingCodeIdInstance{idInstance}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchRoutingCodeIdInstance{idInstance}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchRoutingCodeIdInstance{idInstance}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchRoutingCodeIdInstance{idInstance}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchRoutingCodeIdInstance{idInstance}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchRoutingCodeIdInstance{idInstance}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchRoutingCodeIdInstance{idInstance}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchRoutingCodeIdInstance{idInstance}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchRoutingCodeIdInstanceBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchRoutingCodeIdInstanceUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchRoutingCodeIdInstanceForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchRoutingCodeIdInstanceNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchRoutingCodeIdInstanceRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchRoutingCodeIdInstanceUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchRoutingCodeIdInstanceTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchRoutingCodeIdInstanceInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchRoutingCodeIdInstanceNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchRoutingCodeIdInstanceServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePost201Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\RoutingCodePost201Response|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function patchRoutingCodeIdInstance{idInstance}(int $idInstance, \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePatchRoutingCodeBody $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function patchRoutingCodeIdInstance(int $idInstance, \App\Generated\PdpDirectoryClient\Model\UpdatePatchRoutingCodeBody $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\PatchRoutingCodeIdInstance{idInstance}($idInstance, $requestBody, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\PatchRoutingCodeIdInstance($idInstance, $requestBody, $headerParameters, $accept), $fetch);
     }
     /**
      * Completely update a private routing code.
      *
      * @param int $idInstance Corresponds to the instance id of a legal unit.
-     * @param \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePutRoutingCodeBody $requestBody 
+     * @param \App\Generated\PdpDirectoryClient\Model\UpdatePutRoutingCodeBody $requestBody
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      *     @var array $PPF-affiliations Indicates the user's active affiliations in SIREN/SIRET/Service format. Only the SIREN is mandatory.
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutRoutingCodeIdInstance{idInstance}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutRoutingCodeIdInstance{idInstance}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutRoutingCodeIdInstance{idInstance}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutRoutingCodeIdInstance{idInstance}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutRoutingCodeIdInstance{idInstance}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutRoutingCodeIdInstance{idInstance}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutRoutingCodeIdInstance{idInstance}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutRoutingCodeIdInstance{idInstance}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutRoutingCodeIdInstance{idInstance}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutRoutingCodeIdInstance{idInstance}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutRoutingCodeIdInstanceBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutRoutingCodeIdInstanceUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutRoutingCodeIdInstanceForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutRoutingCodeIdInstanceNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutRoutingCodeIdInstanceRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutRoutingCodeIdInstanceUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutRoutingCodeIdInstanceTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutRoutingCodeIdInstanceInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutRoutingCodeIdInstanceNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutRoutingCodeIdInstanceServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePost201Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\RoutingCodePost201Response|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function putRoutingCodeIdInstance{idInstance}(int $idInstance, \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePutRoutingCodeBody $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function putRoutingCodeIdInstance(int $idInstance, \App\Generated\PdpDirectoryClient\Model\UpdatePutRoutingCodeBody $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\PutRoutingCodeIdInstance{idInstance}($idInstance, $requestBody, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\PutRoutingCodeIdInstance($idInstance, $requestBody, $headerParameters, $accept), $fetch);
     }
     /**
      * Search for directory lines that meet all the criteria passed as parameters and return the results in the desired format.
      *
-     * @param null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLine $requestBody 
+     * @param null|\App\Generated\PdpDirectoryClient\Model\SearchDirectoryLine $requestBody
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineSearchBadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineSearchUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineSearchForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineSearchNotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineSearchRequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineSearchUnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineSearchTooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineSearchInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineSearchNotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineSearchServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineSearchBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineSearchUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineSearchForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineSearchNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineSearchRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineSearchUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineSearchTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineSearchInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineSearchNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineSearchServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLineSearchPost200Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\DirectoryLineSearchPost200Response|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function postDirectoryLineSearch(?\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLine $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function postDirectoryLineSearch(?\App\Generated\PdpDirectoryClient\Model\SearchDirectoryLine $requestBody = null, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\PostDirectoryLineSearch($requestBody, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\PostDirectoryLineSearch($requestBody, $headerParameters, $accept), $fetch);
     }
     /**
      * Creation of a new directory line for a SIREN, a SIRET or a ROUTING CODE.
      *
-     * @param \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateDirectoryLineBody $requestBody 
+     * @param \App\Generated\PdpDirectoryClient\Model\CreateDirectoryLineBody $requestBody
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      *     @var array $PPF-affiliations Indicates the user's active affiliations in SIREN/SIRET/Service format. Only the SIREN is mandatory.
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineBadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineNotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineRequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineUnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineTooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineNotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostDirectoryLineServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostDirectoryLineServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePost201Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\DirectoryLinePost201Response|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function postDirectoryLine(\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateDirectoryLineBody $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function postDirectoryLine(\App\Generated\PdpDirectoryClient\Model\CreateDirectoryLineBody $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\PostDirectoryLine($requestBody, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\PostDirectoryLine($requestBody, $headerParameters, $accept), $fetch);
     }
     /**
      * Retrieve the data from the directory line corresponding to the identifier passed in parameters.
@@ -412,22 +412,22 @@ class Client extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\C
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCodeBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCodeUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCodeForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCodeNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCodeRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCodeUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCodeTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCodeInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCodeNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCodeServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCode|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCode|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function getDirectoryLineCode{addressingIdentifier}(string $addressingIdentifier, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function getDirectoryLineCode(string $addressingIdentifier, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\GetDirectoryLineCode{addressingIdentifier}($addressingIdentifier, $queryParameters, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\GetDirectoryLineCode($addressingIdentifier, $queryParameters, $headerParameters, $accept), $fetch);
     }
     /**
      * Delete a directory line.
@@ -438,22 +438,22 @@ class Client extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\C
      *     @var array $PPF-affiliations Indicates the user's active affiliations in SIREN/SIRET/Service format. Only the SIREN is mandatory.
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\DeleteDirectoryLineIdInstance{idInstance}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\DeleteDirectoryLineIdInstance{idInstance}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\DeleteDirectoryLineIdInstance{idInstance}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\DeleteDirectoryLineIdInstance{idInstance}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\DeleteDirectoryLineIdInstance{idInstance}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\DeleteDirectoryLineIdInstance{idInstance}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\DeleteDirectoryLineIdInstance{idInstance}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\DeleteDirectoryLineIdInstance{idInstance}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\DeleteDirectoryLineIdInstance{idInstance}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\DeleteDirectoryLineIdInstance{idInstance}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\DeleteDirectoryLineIdInstanceBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\DeleteDirectoryLineIdInstanceUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\DeleteDirectoryLineIdInstanceForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\DeleteDirectoryLineIdInstanceNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\DeleteDirectoryLineIdInstanceRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\DeleteDirectoryLineIdInstanceUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\DeleteDirectoryLineIdInstanceTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\DeleteDirectoryLineIdInstanceInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\DeleteDirectoryLineIdInstanceNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\DeleteDirectoryLineIdInstanceServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function deleteDirectoryLineIdInstance{idInstance}(int $idInstance, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    public function deleteDirectoryLineIdInstance(int $idInstance, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\DeleteDirectoryLineIdInstance{idInstance}($idInstance, $headerParameters), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\DeleteDirectoryLineIdInstance($idInstance, $headerParameters), $fetch);
     }
     /**
      * Retrieve the data from the directory line corresponding to the identifier passed in parameters.
@@ -467,89 +467,89 @@ class Client extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\C
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineIdInstance{idInstance}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineIdInstance{idInstance}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineIdInstance{idInstance}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineIdInstance{idInstance}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineIdInstance{idInstance}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineIdInstance{idInstance}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineIdInstance{idInstance}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineIdInstance{idInstance}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineIdInstance{idInstance}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineIdInstance{idInstance}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineIdInstanceBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineIdInstanceUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineIdInstanceForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineIdInstanceNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineIdInstanceRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineIdInstanceUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineIdInstanceTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineIdInstanceInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineIdInstanceNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineIdInstanceServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistory|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistory|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function getDirectoryLineIdInstance{idInstance}(int $idInstance, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function getDirectoryLineIdInstance(int $idInstance, array $queryParameters = [], array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\GetDirectoryLineIdInstance{idInstance}($idInstance, $queryParameters, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\GetDirectoryLineIdInstance($idInstance, $queryParameters, $headerParameters, $accept), $fetch);
     }
     /**
      * Partially updates a directory line.
      *
      * @param int $idInstance Corresponds to the instance id of a legal unit.
-     * @param \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePatchDirectoryLineBody $requestBody 
+     * @param \App\Generated\PdpDirectoryClient\Model\UpdatePatchDirectoryLineBody $requestBody
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      *     @var array $PPF-affiliations Indicates the user's active affiliations in SIREN/SIRET/Service format. Only the SIREN is mandatory.
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchDirectoryLineIdInstance{idInstance}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchDirectoryLineIdInstance{idInstance}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchDirectoryLineIdInstance{idInstance}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchDirectoryLineIdInstance{idInstance}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchDirectoryLineIdInstance{idInstance}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchDirectoryLineIdInstance{idInstance}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchDirectoryLineIdInstance{idInstance}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchDirectoryLineIdInstance{idInstance}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchDirectoryLineIdInstance{idInstance}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PatchDirectoryLineIdInstance{idInstance}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchDirectoryLineIdInstanceBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchDirectoryLineIdInstanceUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchDirectoryLineIdInstanceForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchDirectoryLineIdInstanceNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchDirectoryLineIdInstanceRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchDirectoryLineIdInstanceUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchDirectoryLineIdInstanceTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchDirectoryLineIdInstanceInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchDirectoryLineIdInstanceNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PatchDirectoryLineIdInstanceServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePost201Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\DirectoryLinePost201Response|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function patchDirectoryLineIdInstance{idInstance}(int $idInstance, \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePatchDirectoryLineBody $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function patchDirectoryLineIdInstance(int $idInstance, \App\Generated\PdpDirectoryClient\Model\UpdatePatchDirectoryLineBody $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\PatchDirectoryLineIdInstance{idInstance}($idInstance, $requestBody, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\PatchDirectoryLineIdInstance($idInstance, $requestBody, $headerParameters, $accept), $fetch);
     }
     /**
      * Completely update a directory line.
      *
      * @param int $idInstance Corresponds to the instance id of a legal unit.
-     * @param \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePutDirectoryLineBody $requestBody 
+     * @param \App\Generated\PdpDirectoryClient\Model\UpdatePutDirectoryLineBody $requestBody
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      *     @var array $PPF-affiliations Indicates the user's active affiliations in SIREN/SIRET/Service format. Only the SIREN is mandatory.
      * }
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      * @param array $accept Accept content header application/json|application/problem+json
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstanceBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstanceUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstanceForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstanceNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstanceRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstanceUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstanceTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstanceInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstanceNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstanceServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePost201Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
+     * @return null|\App\Generated\PdpDirectoryClient\Model\DirectoryLinePost201Response|\App\Generated\PdpDirectoryClient\Model\Error|\Psr\Http\Message\ResponseInterface
      */
-    public function putDirectoryLineIdInstance{idInstance}(int $idInstance, \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePutDirectoryLineBody $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
+    public function putDirectoryLineIdInstance(int $idInstance, \App\Generated\PdpDirectoryClient\Model\UpdatePutDirectoryLineBody $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT, array $accept = [])
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\PutDirectoryLineIdInstance{idInstance}($idInstance, $requestBody, $headerParameters, $accept), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\PutDirectoryLineIdInstance($idInstance, $requestBody, $headerParameters, $accept), $fetch);
     }
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetHealthInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetHealthServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetHealthInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetHealthServiceUnavailableException
      *
      * @return null|\Psr\Http\Message\ResponseInterface
      */
     public function getHealth(string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executeEndpoint(new \PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint\GetHealth(), $fetch);
+        return $this->executeEndpoint(new \App\Generated\PdpDirectoryClient\Endpoint\GetHealth(), $fetch);
     }
     public static function create($httpClient = null, array $additionalPlugins = [], array $additionalNormalizers = [])
     {
@@ -566,7 +566,7 @@ class Client extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\C
         }
         $requestFactory = \Http\Discovery\Psr17FactoryDiscovery::findRequestFactory();
         $streamFactory = \Http\Discovery\Psr17FactoryDiscovery::findStreamFactory();
-        $normalizers = [new \Symfony\Component\Serializer\Normalizer\ArrayDenormalizer(), new \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\JaneObjectNormalizer()];
+        $normalizers = [new \Symfony\Component\Serializer\Normalizer\ArrayDenormalizer(), new \App\Generated\PdpDirectoryClient\Normalizer\JaneObjectNormalizer()];
         if (count($additionalNormalizers) > 0) {
             $normalizers = array_merge($normalizers, $additionalNormalizers);
         }

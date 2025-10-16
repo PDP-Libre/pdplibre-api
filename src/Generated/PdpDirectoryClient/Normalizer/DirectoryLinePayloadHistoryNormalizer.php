@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -19,11 +19,11 @@ class DirectoryLinePayloadHistoryNormalizer implements DenormalizerInterface, No
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistory::class;
+        return $type === \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistory::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistory::class;
+        return is_object($data) && get_class($data) === \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistory::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
@@ -33,7 +33,7 @@ class DirectoryLinePayloadHistoryNormalizer implements DenormalizerInterface, No
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistory();
+        $object = new \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistory();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -74,15 +74,15 @@ class DirectoryLinePayloadHistoryNormalizer implements DenormalizerInterface, No
             unset($data['createdBy']);
         }
         if (\array_key_exists('history', $data)) {
-            $object->setHistory($this->denormalizer->denormalize($data['history'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\HistoryRead::class, 'json', $context));
+            $object->setHistory($this->denormalizer->denormalize($data['history'], \App\Generated\PdpDirectoryClient\Model\HistoryRead::class, 'json', $context));
             unset($data['history']);
         }
         if (\array_key_exists('routingCode', $data)) {
-            $object->setRoutingCode($this->denormalizer->denormalize($data['routingCode'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode::class, 'json', $context));
+            $object->setRoutingCode($this->denormalizer->denormalize($data['routingCode'], \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode::class, 'json', $context));
             unset($data['routingCode']);
         }
         if (\array_key_exists('plateform', $data)) {
-            $object->setPlateform($this->denormalizer->denormalize($data['plateform'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodePlateform::class, 'json', $context));
+            $object->setPlateform($this->denormalizer->denormalize($data['plateform'], \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodePlateform::class, 'json', $context));
             unset($data['plateform']);
         }
         foreach ($data as $key => $value) {
@@ -140,6 +140,6 @@ class DirectoryLinePayloadHistoryNormalizer implements DenormalizerInterface, No
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistory::class => false];
+        return [\App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistory::class => false];
     }
 }

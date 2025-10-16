@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Normalizer;
+namespace App\Generated\PdpFlowClient\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use PdpLibre\Generated\PdpFlowClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFlowClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpFlowClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpFlowClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -19,11 +19,11 @@ class ErrorNormalizer implements DenormalizerInterface, NormalizerInterface, Den
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \PdpLibre\Generated\PdpFlowClient\Model\Error::class;
+        return $type === \App\Generated\PdpFlowClient\Model\Error::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \PdpLibre\Generated\PdpFlowClient\Model\Error::class;
+        return is_object($data) && get_class($data) === \App\Generated\PdpFlowClient\Model\Error::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
@@ -33,7 +33,7 @@ class ErrorNormalizer implements DenormalizerInterface, NormalizerInterface, Den
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \PdpLibre\Generated\PdpFlowClient\Model\Error();
+        $object = new \App\Generated\PdpFlowClient\Model\Error();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -68,6 +68,6 @@ class ErrorNormalizer implements DenormalizerInterface, NormalizerInterface, Den
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\PdpLibre\Generated\PdpFlowClient\Model\Error::class => false];
+        return [\App\Generated\PdpFlowClient\Model\Error::class => false];
     }
 }

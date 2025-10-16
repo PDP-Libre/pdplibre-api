@@ -1,8 +1,8 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint;
+namespace App\Generated\PdpDirectoryClient\Endpoint;
 
-class GetDirectoryLineCode{addressingIdentifier} extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\BaseEndpoint implements \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\Endpoint
+class GetDirectoryLineCode{addressingIdentifier} extends \App\Generated\PdpDirectoryClient\Runtime\Client\BaseEndpoint implements \App\Generated\PdpDirectoryClient\Runtime\Client\Endpoint
 {
     protected $addressing-identifier;
     protected $accept;
@@ -27,7 +27,7 @@ class GetDirectoryLineCode{addressingIdentifier} extends \PdpLibre\Generated\Pdp
         $this->headerParameters = $headerParameters;
         $this->accept = $accept;
     }
-    use \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\EndpointTrait;
+    use \App\Generated\PdpDirectoryClient\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'GET';
@@ -70,58 +70,58 @@ class GetDirectoryLineCode{addressingIdentifier} extends \PdpLibre\Generated\Pdp
     /**
      * {@inheritdoc}
      *
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}BadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}UnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}ForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}NotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}RequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}UnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}TooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}InternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}NotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}ServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCode|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error
+     * @return null|\App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCode|\App\Generated\PdpDirectoryClient\Model\Error
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCode', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCode', 'json');
         }
         if (400 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}BadRequestException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}BadRequestException($response);
         }
         if (401 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}UnauthorizedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}UnauthorizedException($response);
         }
         if (403 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}ForbiddenException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}ForbiddenException($response);
         }
         if (404 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}NotFoundException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}NotFoundException($response);
         }
         if (408 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}RequestTimeoutException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}RequestTimeoutException($response);
         }
         if (422 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}UnprocessableEntityException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}UnprocessableEntityException($response);
         }
         if (429 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}TooManyRequestsException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}TooManyRequestsException($response);
         }
         if (500 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}InternalServerErrorException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}InternalServerErrorException($response);
         }
         if (501 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}NotImplementedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}NotImplementedException($response);
         }
         if (503 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}ServiceUnavailableException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetDirectoryLineCode{addressingIdentifier}ServiceUnavailableException($response);
         }
         if (mb_strpos($contentType, 'application/problem+json') !== false) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\Error', 'json');
         }
     }
     public function getAuthenticationScopes(): array

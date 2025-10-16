@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -19,11 +19,11 @@ class RoutingCodeSearchFiltersRoutingIdentifierNormalizer implements Denormalize
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier::class;
+        return $type === \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier::class;
+        return is_object($data) && get_class($data) === \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
@@ -33,7 +33,7 @@ class RoutingCodeSearchFiltersRoutingIdentifierNormalizer implements Denormalize
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier();
+        $object = new \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -70,6 +70,6 @@ class RoutingCodeSearchFiltersRoutingIdentifierNormalizer implements Denormalize
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier::class => false];
+        return [\App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier::class => false];
     }
 }

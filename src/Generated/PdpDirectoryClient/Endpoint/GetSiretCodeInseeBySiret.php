@@ -1,8 +1,8 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint;
+namespace App\Generated\PdpDirectoryClient\Endpoint;
 
-class GetSiretCodeInseeBySiret extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\BaseEndpoint implements \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\Endpoint
+class GetSiretCodeInseeBySiret extends \App\Generated\PdpDirectoryClient\Runtime\Client\BaseEndpoint implements \App\Generated\PdpDirectoryClient\Runtime\Client\Endpoint
 {
     protected $siret;
     protected $accept;
@@ -27,7 +27,7 @@ class GetSiretCodeInseeBySiret extends \PdpLibre\Generated\PdpFPdpDirectoryClien
         $this->headerParameters = $headerParameters;
         $this->accept = $accept;
     }
-    use \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\EndpointTrait;
+    use \App\Generated\PdpDirectoryClient\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'GET';
@@ -70,58 +70,58 @@ class GetSiretCodeInseeBySiret extends \PdpLibre\Generated\PdpFPdpDirectoryClien
     /**
      * {@inheritdoc}
      *
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretBadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretNotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretRequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretUnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretTooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretNotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistoryUle|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error
+     * @return null|\App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistoryUle|\App\Generated\PdpDirectoryClient\Model\Error
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistoryUle', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistoryUle', 'json');
         }
         if (400 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretBadRequestException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretBadRequestException($response);
         }
         if (401 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretUnauthorizedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretUnauthorizedException($response);
         }
         if (403 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretForbiddenException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretForbiddenException($response);
         }
         if (404 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretNotFoundException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretNotFoundException($response);
         }
         if (408 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretRequestTimeoutException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretRequestTimeoutException($response);
         }
         if (422 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretUnprocessableEntityException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretUnprocessableEntityException($response);
         }
         if (429 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretTooManyRequestsException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretTooManyRequestsException($response);
         }
         if (500 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretInternalServerErrorException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretInternalServerErrorException($response);
         }
         if (501 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretNotImplementedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretNotImplementedException($response);
         }
         if (503 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSiretCodeInseeBySiretServiceUnavailableException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSiretCodeInseeBySiretServiceUnavailableException($response);
         }
         if (mb_strpos($contentType, 'application/problem+json') !== false) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\Error', 'json');
         }
     }
     public function getAuthenticationScopes(): array

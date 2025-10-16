@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Model;
+namespace App\Generated\PdpDirectoryClient\Model;
 
 class DirectoryLinePayloadHistory extends \ArrayObject
 {

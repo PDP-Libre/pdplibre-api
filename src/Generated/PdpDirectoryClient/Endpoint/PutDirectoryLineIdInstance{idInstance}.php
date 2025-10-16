@@ -1,8 +1,8 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint;
+namespace App\Generated\PdpDirectoryClient\Endpoint;
 
-class PutDirectoryLineIdInstance{idInstance} extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\BaseEndpoint implements \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\Endpoint
+class PutDirectoryLineIdInstance{idInstance} extends \App\Generated\PdpDirectoryClient\Runtime\Client\BaseEndpoint implements \App\Generated\PdpDirectoryClient\Runtime\Client\Endpoint
 {
     protected $id-instance;
     protected $accept;
@@ -10,21 +10,21 @@ class PutDirectoryLineIdInstance{idInstance} extends \PdpLibre\Generated\PdpFPdp
      * Completely update a directory line.
      *
      * @param int $idInstance Corresponds to the instance id of a legal unit.
-     * @param \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePutDirectoryLineBody $requestBody 
+     * @param \App\Generated\PdpDirectoryClient\Model\UpdatePutDirectoryLineBody $requestBody 
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      *     @var array $PPF-affiliations Indicates the user's active affiliations in SIREN/SIRET/Service format. Only the SIREN is mandatory.
      * }
      * @param array $accept Accept content header application/json|application/problem+json
      */
-    public function __construct(int $idInstance, \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePutDirectoryLineBody $requestBody, array $headerParameters = [], array $accept = [])
+    public function __construct(int $idInstance, \App\Generated\PdpDirectoryClient\Model\UpdatePutDirectoryLineBody $requestBody, array $headerParameters = [], array $accept = [])
     {
         $this->id-instance = $idInstance;
         $this->body = $requestBody;
         $this->headerParameters = $headerParameters;
         $this->accept = $accept;
     }
-    use \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\EndpointTrait;
+    use \App\Generated\PdpDirectoryClient\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'PUT';
@@ -35,7 +35,7 @@ class PutDirectoryLineIdInstance{idInstance} extends \PdpLibre\Generated\PdpFPdp
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePutDirectoryLineBody) {
+        if ($this->body instanceof \App\Generated\PdpDirectoryClient\Model\UpdatePutDirectoryLineBody) {
             return [['Content-Type' => ['application/json']], $serializer->serialize($this->body, 'json')];
         }
         return [[], null];
@@ -60,58 +60,58 @@ class PutDirectoryLineIdInstance{idInstance} extends \PdpLibre\Generated\PdpFPdp
     /**
      * {@inheritdoc}
      *
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}BadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}UnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}ForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}NotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}RequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}UnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}TooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}InternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}NotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}ServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePost201Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error
+     * @return null|\App\Generated\PdpDirectoryClient\Model\DirectoryLinePost201Response|\App\Generated\PdpDirectoryClient\Model\Error
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePost201Response', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\DirectoryLinePost201Response', 'json');
         }
         if (400 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}BadRequestException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}BadRequestException($response);
         }
         if (401 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}UnauthorizedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}UnauthorizedException($response);
         }
         if (403 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}ForbiddenException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}ForbiddenException($response);
         }
         if (404 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}NotFoundException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}NotFoundException($response);
         }
         if (408 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}RequestTimeoutException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}RequestTimeoutException($response);
         }
         if (422 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}UnprocessableEntityException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}UnprocessableEntityException($response);
         }
         if (429 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}TooManyRequestsException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}TooManyRequestsException($response);
         }
         if (500 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}InternalServerErrorException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}InternalServerErrorException($response);
         }
         if (501 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}NotImplementedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}NotImplementedException($response);
         }
         if (503 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}ServiceUnavailableException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PutDirectoryLineIdInstance{idInstance}ServiceUnavailableException($response);
         }
         if (mb_strpos($contentType, 'application/problem+json') !== false) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\Error', 'json');
         }
     }
     public function getAuthenticationScopes(): array

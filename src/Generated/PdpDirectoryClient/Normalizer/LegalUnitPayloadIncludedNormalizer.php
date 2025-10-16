@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -19,11 +19,11 @@ class LegalUnitPayloadIncludedNormalizer implements DenormalizerInterface, Norma
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadIncluded::class;
+        return $type === \App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadIncluded::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadIncluded::class;
+        return is_object($data) && get_class($data) === \App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadIncluded::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
@@ -33,7 +33,7 @@ class LegalUnitPayloadIncludedNormalizer implements DenormalizerInterface, Norma
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadIncluded();
+        $object = new \App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadIncluded();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -84,6 +84,6 @@ class LegalUnitPayloadIncludedNormalizer implements DenormalizerInterface, Norma
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadIncluded::class => false];
+        return [\App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadIncluded::class => false];
     }
 }

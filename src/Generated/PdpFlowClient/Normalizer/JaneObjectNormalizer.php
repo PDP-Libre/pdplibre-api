@@ -1,9 +1,9 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Normalizer;
+namespace App\Generated\PdpFlowClient\Normalizer;
 
-use PdpLibre\Generated\PdpFlowClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFlowClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpFlowClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpFlowClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -18,27 +18,27 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
     use ValidatorTrait;
     protected $normalizers = [
         
-        \PdpLibre\Generated\PdpFlowClient\Model\FlowInfo::class => \PdpLibre\Generated\PdpFlowClient\Normalizer\FlowInfoNormalizer::class,
+        \App\Generated\PdpFlowClient\Model\FlowInfo::class => \App\Generated\PdpFlowClient\Normalizer\FlowInfoNormalizer::class,
         
-        \PdpLibre\Generated\PdpFlowClient\Model\SearchFlowParams::class => \PdpLibre\Generated\PdpFlowClient\Normalizer\SearchFlowParamsNormalizer::class,
+        \App\Generated\PdpFlowClient\Model\SearchFlowParams::class => \App\Generated\PdpFlowClient\Normalizer\SearchFlowParamsNormalizer::class,
         
-        \PdpLibre\Generated\PdpFlowClient\Model\FlowIdObject::class => \PdpLibre\Generated\PdpFlowClient\Normalizer\FlowIdObjectNormalizer::class,
+        \App\Generated\PdpFlowClient\Model\FlowIdObject::class => \App\Generated\PdpFlowClient\Normalizer\FlowIdObjectNormalizer::class,
         
-        \PdpLibre\Generated\PdpFlowClient\Model\FullFlowInfo::class => \PdpLibre\Generated\PdpFlowClient\Normalizer\FullFlowInfoNormalizer::class,
+        \App\Generated\PdpFlowClient\Model\FullFlowInfo::class => \App\Generated\PdpFlowClient\Normalizer\FullFlowInfoNormalizer::class,
         
-        \PdpLibre\Generated\PdpFlowClient\Model\AcknowledgementDetail::class => \PdpLibre\Generated\PdpFlowClient\Normalizer\AcknowledgementDetailNormalizer::class,
+        \App\Generated\PdpFlowClient\Model\AcknowledgementDetail::class => \App\Generated\PdpFlowClient\Normalizer\AcknowledgementDetailNormalizer::class,
         
-        \PdpLibre\Generated\PdpFlowClient\Model\Acknowledgement::class => \PdpLibre\Generated\PdpFlowClient\Normalizer\AcknowledgementNormalizer::class,
+        \App\Generated\PdpFlowClient\Model\Acknowledgement::class => \App\Generated\PdpFlowClient\Normalizer\AcknowledgementNormalizer::class,
         
-        \PdpLibre\Generated\PdpFlowClient\Model\Flow::class => \PdpLibre\Generated\PdpFlowClient\Normalizer\FlowNormalizer::class,
+        \App\Generated\PdpFlowClient\Model\Flow::class => \App\Generated\PdpFlowClient\Normalizer\FlowNormalizer::class,
         
-        \PdpLibre\Generated\PdpFlowClient\Model\SearchFlowContent::class => \PdpLibre\Generated\PdpFlowClient\Normalizer\SearchFlowContentNormalizer::class,
+        \App\Generated\PdpFlowClient\Model\SearchFlowContent::class => \App\Generated\PdpFlowClient\Normalizer\SearchFlowContentNormalizer::class,
         
-        \PdpLibre\Generated\PdpFlowClient\Model\Error::class => \PdpLibre\Generated\PdpFlowClient\Normalizer\ErrorNormalizer::class,
+        \App\Generated\PdpFlowClient\Model\Error::class => \App\Generated\PdpFlowClient\Normalizer\ErrorNormalizer::class,
         
-        \PdpLibre\Generated\PdpFlowClient\Model\V1FlowsPostBody::class => \PdpLibre\Generated\PdpFlowClient\Normalizer\V1FlowsPostBodyNormalizer::class,
+        \App\Generated\PdpFlowClient\Model\V1FlowsPostBody::class => \App\Generated\PdpFlowClient\Normalizer\V1FlowsPostBodyNormalizer::class,
         
-        \Jane\Component\JsonSchemaRuntime\Reference::class => \PdpLibre\Generated\PdpFlowClient\Runtime\Normalizer\ReferenceNormalizer::class,
+        \Jane\Component\JsonSchemaRuntime\Reference::class => \App\Generated\PdpFlowClient\Runtime\Normalizer\ReferenceNormalizer::class,
     ], $normalizersCache = [];
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
@@ -76,16 +76,16 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
     {
         return [
             
-            \PdpLibre\Generated\PdpFlowClient\Model\FlowInfo::class => false,
-            \PdpLibre\Generated\PdpFlowClient\Model\SearchFlowParams::class => false,
-            \PdpLibre\Generated\PdpFlowClient\Model\FlowIdObject::class => false,
-            \PdpLibre\Generated\PdpFlowClient\Model\FullFlowInfo::class => false,
-            \PdpLibre\Generated\PdpFlowClient\Model\AcknowledgementDetail::class => false,
-            \PdpLibre\Generated\PdpFlowClient\Model\Acknowledgement::class => false,
-            \PdpLibre\Generated\PdpFlowClient\Model\Flow::class => false,
-            \PdpLibre\Generated\PdpFlowClient\Model\SearchFlowContent::class => false,
-            \PdpLibre\Generated\PdpFlowClient\Model\Error::class => false,
-            \PdpLibre\Generated\PdpFlowClient\Model\V1FlowsPostBody::class => false,
+            \App\Generated\PdpFlowClient\Model\FlowInfo::class => false,
+            \App\Generated\PdpFlowClient\Model\SearchFlowParams::class => false,
+            \App\Generated\PdpFlowClient\Model\FlowIdObject::class => false,
+            \App\Generated\PdpFlowClient\Model\FullFlowInfo::class => false,
+            \App\Generated\PdpFlowClient\Model\AcknowledgementDetail::class => false,
+            \App\Generated\PdpFlowClient\Model\Acknowledgement::class => false,
+            \App\Generated\PdpFlowClient\Model\Flow::class => false,
+            \App\Generated\PdpFlowClient\Model\SearchFlowContent::class => false,
+            \App\Generated\PdpFlowClient\Model\Error::class => false,
+            \App\Generated\PdpFlowClient\Model\V1FlowsPostBody::class => false,
             \Jane\Component\JsonSchemaRuntime\Reference::class => false,
         ];
     }

@@ -1,8 +1,8 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Endpoint;
+namespace App\Generated\PdpFlowClient\Endpoint;
 
-class CreateFlow extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\BaseEndpoint implements \PdpLibre\Generated\PdpFlowClient\Runtime\Client\Endpoint
+class CreateFlow extends \App\Generated\PdpFlowClient\Runtime\Client\BaseEndpoint implements \App\Generated\PdpFlowClient\Runtime\Client\Endpoint
 {
     /**
     * Submit a flow. A flow is a single-invoice file, with :
@@ -16,17 +16,17 @@ class CreateFlow extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\BaseEn
      - or a e-reporting file
     
     *
-    * @param null|\PdpLibre\Generated\PdpFlowClient\Model\V1FlowsPostBody $requestBody 
+    * @param null|\App\Generated\PdpFlowClient\Model\V1FlowsPostBody $requestBody 
     * @param array $headerParameters {
     *     @var string $Request-Id Header parameter used to correlate logs from several components
     * }
     */
-    public function __construct(?\PdpLibre\Generated\PdpFlowClient\Model\V1FlowsPostBody $requestBody = null, array $headerParameters = [])
+    public function __construct(?\App\Generated\PdpFlowClient\Model\V1FlowsPostBody $requestBody = null, array $headerParameters = [])
     {
         $this->body = $requestBody;
         $this->headerParameters = $headerParameters;
     }
-    use \PdpLibre\Generated\PdpFlowClient\Runtime\Client\EndpointTrait;
+    use \App\Generated\PdpFlowClient\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'POST';
@@ -37,7 +37,7 @@ class CreateFlow extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\BaseEn
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \PdpLibre\Generated\PdpFlowClient\Model\V1FlowsPostBody) {
+        if ($this->body instanceof \App\Generated\PdpFlowClient\Model\V1FlowsPostBody) {
             $bodyBuilder = new \Http\Message\MultipartStream\MultipartStreamBuilder($streamFactory);
             $formParameters = $serializer->normalize($this->body, 'json');
             foreach ($formParameters as $key => $value) {
@@ -64,35 +64,35 @@ class CreateFlow extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\BaseEn
     /**
      * {@inheritdoc}
      *
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowBadRequestException
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowForbiddenException
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowServiceUnavailableException
+     * @throws \App\Generated\PdpFlowClient\Exception\CreateFlowBadRequestException
+     * @throws \App\Generated\PdpFlowClient\Exception\CreateFlowUnauthorizedException
+     * @throws \App\Generated\PdpFlowClient\Exception\CreateFlowForbiddenException
+     * @throws \App\Generated\PdpFlowClient\Exception\CreateFlowInternalServerErrorException
+     * @throws \App\Generated\PdpFlowClient\Exception\CreateFlowServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFlowClient\Model\FullFlowInfo
+     * @return null|\App\Generated\PdpFlowClient\Model\FullFlowInfo
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (is_null($contentType) === false && (202 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\FullFlowInfo', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\FullFlowInfo', 'json');
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowBadRequestException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\CreateFlowBadRequestException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowUnauthorizedException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\CreateFlowUnauthorizedException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
         if (is_null($contentType) === false && (403 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowForbiddenException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\CreateFlowForbiddenException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
         if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowInternalServerErrorException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\CreateFlowInternalServerErrorException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
         if (is_null($contentType) === false && (503 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\CreateFlowServiceUnavailableException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\CreateFlowServiceUnavailableException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
     }
     public function getAuthenticationScopes(): array

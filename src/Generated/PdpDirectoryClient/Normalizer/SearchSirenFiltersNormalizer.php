@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -19,11 +19,11 @@ class SearchSirenFiltersNormalizer implements DenormalizerInterface, NormalizerI
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFilters::class;
+        return $type === \App\Generated\PdpDirectoryClient\Model\SearchSirenFilters::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFilters::class;
+        return is_object($data) && get_class($data) === \App\Generated\PdpDirectoryClient\Model\SearchSirenFilters::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
@@ -33,28 +33,28 @@ class SearchSirenFiltersNormalizer implements DenormalizerInterface, NormalizerI
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFilters();
+        $object = new \App\Generated\PdpDirectoryClient\Model\SearchSirenFilters();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('siren', $data)) {
-            $object->setSiren($this->denormalizer->denormalize($data['siren'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersSiren::class, 'json', $context));
+            $object->setSiren($this->denormalizer->denormalize($data['siren'], \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersSiren::class, 'json', $context));
             unset($data['siren']);
         }
         if (\array_key_exists('businessName', $data)) {
-            $object->setBusinessName($this->denormalizer->denormalize($data['businessName'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersBusinessName::class, 'json', $context));
+            $object->setBusinessName($this->denormalizer->denormalize($data['businessName'], \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersBusinessName::class, 'json', $context));
             unset($data['businessName']);
         }
         if (\array_key_exists('entityType', $data)) {
-            $object->setEntityType($this->denormalizer->denormalize($data['entityType'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersEntityType::class, 'json', $context));
+            $object->setEntityType($this->denormalizer->denormalize($data['entityType'], \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersEntityType::class, 'json', $context));
             unset($data['entityType']);
         }
         if (\array_key_exists('administrativeStatus', $data)) {
-            $object->setAdministrativeStatus($this->denormalizer->denormalize($data['administrativeStatus'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersAdministrativeStatus::class, 'json', $context));
+            $object->setAdministrativeStatus($this->denormalizer->denormalize($data['administrativeStatus'], \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersAdministrativeStatus::class, 'json', $context));
             unset($data['administrativeStatus']);
         }
         if (\array_key_exists('history', $data)) {
-            $object->setHistory($this->denormalizer->denormalize($data['history'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersHistory::class, 'json', $context));
+            $object->setHistory($this->denormalizer->denormalize($data['history'], \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersHistory::class, 'json', $context));
             unset($data['history']);
         }
         foreach ($data as $key => $value) {
@@ -91,6 +91,6 @@ class SearchSirenFiltersNormalizer implements DenormalizerInterface, NormalizerI
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFilters::class => false];
+        return [\App\Generated\PdpDirectoryClient\Model\SearchSirenFilters::class => false];
     }
 }

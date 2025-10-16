@@ -1,8 +1,8 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint;
+namespace App\Generated\PdpDirectoryClient\Endpoint;
 
-class GetRoutingCodeIdInstance{idInstance} extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\BaseEndpoint implements \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\Endpoint
+class GetRoutingCodeIdInstance{idInstance} extends \App\Generated\PdpDirectoryClient\Runtime\Client\BaseEndpoint implements \App\Generated\PdpDirectoryClient\Runtime\Client\Endpoint
 {
     protected $id-instance;
     protected $accept;
@@ -25,7 +25,7 @@ class GetRoutingCodeIdInstance{idInstance} extends \PdpLibre\Generated\PdpFPdpDi
         $this->headerParameters = $headerParameters;
         $this->accept = $accept;
     }
-    use \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\EndpointTrait;
+    use \App\Generated\PdpDirectoryClient\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'GET';
@@ -66,58 +66,58 @@ class GetRoutingCodeIdInstance{idInstance} extends \PdpLibre\Generated\PdpFPdpDi
     /**
      * {@inheritdoc}
      *
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}BadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}UnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}ForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}NotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}RequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}UnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}TooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}InternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}NotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}ServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}BadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}UnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}ForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}NotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}RequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}UnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}TooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}InternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}NotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}ServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistory|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error
+     * @return null|\App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistory|\App\Generated\PdpDirectoryClient\Model\Error
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistory', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistory', 'json');
         }
         if (400 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}BadRequestException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}BadRequestException($response);
         }
         if (401 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}UnauthorizedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}UnauthorizedException($response);
         }
         if (403 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}ForbiddenException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}ForbiddenException($response);
         }
         if (404 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}NotFoundException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}NotFoundException($response);
         }
         if (408 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}RequestTimeoutException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}RequestTimeoutException($response);
         }
         if (422 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}UnprocessableEntityException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}UnprocessableEntityException($response);
         }
         if (429 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}TooManyRequestsException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}TooManyRequestsException($response);
         }
         if (500 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}InternalServerErrorException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}InternalServerErrorException($response);
         }
         if (501 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}NotImplementedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}NotImplementedException($response);
         }
         if (503 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}ServiceUnavailableException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetRoutingCodeIdInstance{idInstance}ServiceUnavailableException($response);
         }
         if (mb_strpos($contentType, 'application/problem+json') !== false) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\Error', 'json');
         }
     }
     public function getAuthenticationScopes(): array

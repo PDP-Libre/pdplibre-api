@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Exception;
+namespace App\Generated\PdpFlowClient\Exception;
 
 interface ApiException extends \Throwable
 {

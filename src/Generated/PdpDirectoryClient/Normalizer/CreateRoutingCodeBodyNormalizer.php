@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -19,11 +19,11 @@ class CreateRoutingCodeBodyNormalizer implements DenormalizerInterface, Normaliz
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateRoutingCodeBody::class;
+        return $type === \App\Generated\PdpDirectoryClient\Model\CreateRoutingCodeBody::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateRoutingCodeBody::class;
+        return is_object($data) && get_class($data) === \App\Generated\PdpDirectoryClient\Model\CreateRoutingCodeBody::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
@@ -33,7 +33,7 @@ class CreateRoutingCodeBodyNormalizer implements DenormalizerInterface, Normaliz
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateRoutingCodeBody();
+        $object = new \App\Generated\PdpDirectoryClient\Model\CreateRoutingCodeBody();
         if (\array_key_exists('managesLegalCommitmentCode', $data) && \is_int($data['managesLegalCommitmentCode'])) {
             $data['managesLegalCommitmentCode'] = (bool) $data['managesLegalCommitmentCode'];
         }
@@ -62,7 +62,7 @@ class CreateRoutingCodeBodyNormalizer implements DenormalizerInterface, Normaliz
             $object->setAdministrativeStatus($data['administrativeStatus']);
         }
         if (\array_key_exists('address', $data)) {
-            $object->setAddress($this->denormalizer->denormalize($data['address'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\AddressEdit::class, 'json', $context));
+            $object->setAddress($this->denormalizer->denormalize($data['address'], \App\Generated\PdpDirectoryClient\Model\AddressEdit::class, 'json', $context));
         }
         return $object;
     }
@@ -87,6 +87,6 @@ class CreateRoutingCodeBodyNormalizer implements DenormalizerInterface, Normaliz
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateRoutingCodeBody::class => false];
+        return [\App\Generated\PdpDirectoryClient\Model\CreateRoutingCodeBody::class => false];
     }
 }

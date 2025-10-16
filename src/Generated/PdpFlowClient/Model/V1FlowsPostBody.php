@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Model;
+namespace App\Generated\PdpFlowClient\Model;
 
 class V1FlowsPostBody extends \ArrayObject
 {

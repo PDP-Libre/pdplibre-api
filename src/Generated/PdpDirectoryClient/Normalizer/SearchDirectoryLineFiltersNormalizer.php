@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -19,11 +19,11 @@ class SearchDirectoryLineFiltersNormalizer implements DenormalizerInterface, Nor
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFilters::class;
+        return $type === \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFilters::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFilters::class;
+        return is_object($data) && get_class($data) === \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFilters::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
@@ -33,36 +33,36 @@ class SearchDirectoryLineFiltersNormalizer implements DenormalizerInterface, Nor
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFilters();
+        $object = new \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFilters();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
         if (\array_key_exists('addressingIdentifier', $data)) {
-            $object->setAddressingIdentifier($this->denormalizer->denormalize($data['addressingIdentifier'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFiltersAddressingIdentifier::class, 'json', $context));
+            $object->setAddressingIdentifier($this->denormalizer->denormalize($data['addressingIdentifier'], \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFiltersAddressingIdentifier::class, 'json', $context));
             unset($data['addressingIdentifier']);
         }
         if (\array_key_exists('platformRegistrationNumber', $data)) {
-            $object->setPlatformRegistrationNumber($this->denormalizer->denormalize($data['platformRegistrationNumber'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFiltersPlatformRegistrationNumber::class, 'json', $context));
+            $object->setPlatformRegistrationNumber($this->denormalizer->denormalize($data['platformRegistrationNumber'], \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFiltersPlatformRegistrationNumber::class, 'json', $context));
             unset($data['platformRegistrationNumber']);
         }
         if (\array_key_exists('siren', $data)) {
-            $object->setSiren($this->denormalizer->denormalize($data['siren'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersSiren::class, 'json', $context));
+            $object->setSiren($this->denormalizer->denormalize($data['siren'], \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersSiren::class, 'json', $context));
             unset($data['siren']);
         }
         if (\array_key_exists('siret', $data)) {
-            $object->setSiret($this->denormalizer->denormalize($data['siret'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersSiret::class, 'json', $context));
+            $object->setSiret($this->denormalizer->denormalize($data['siret'], \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersSiret::class, 'json', $context));
             unset($data['siret']);
         }
         if (\array_key_exists('routingIdentifier', $data)) {
-            $object->setRoutingIdentifier($this->denormalizer->denormalize($data['routingIdentifier'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier::class, 'json', $context));
+            $object->setRoutingIdentifier($this->denormalizer->denormalize($data['routingIdentifier'], \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier::class, 'json', $context));
             unset($data['routingIdentifier']);
         }
         if (\array_key_exists('addressingSuffix', $data)) {
-            $object->setAddressingSuffix($this->denormalizer->denormalize($data['addressingSuffix'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFiltersAddressingSuffix::class, 'json', $context));
+            $object->setAddressingSuffix($this->denormalizer->denormalize($data['addressingSuffix'], \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFiltersAddressingSuffix::class, 'json', $context));
             unset($data['addressingSuffix']);
         }
         if (\array_key_exists('history', $data)) {
-            $object->setHistory($this->denormalizer->denormalize($data['history'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersHistory::class, 'json', $context));
+            $object->setHistory($this->denormalizer->denormalize($data['history'], \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersHistory::class, 'json', $context));
             unset($data['history']);
         }
         foreach ($data as $key => $value) {
@@ -105,6 +105,6 @@ class SearchDirectoryLineFiltersNormalizer implements DenormalizerInterface, Nor
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFilters::class => false];
+        return [\App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFilters::class => false];
     }
 }

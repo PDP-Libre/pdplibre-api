@@ -1,6 +1,6 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Model;
+namespace App\Generated\PdpFlowClient\Model;
 
 class Error extends \ArrayObject
 {

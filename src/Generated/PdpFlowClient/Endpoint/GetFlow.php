@@ -1,8 +1,8 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Endpoint;
+namespace App\Generated\PdpFlowClient\Endpoint;
 
-class GetFlow extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\BaseEndpoint implements \PdpLibre\Generated\PdpFlowClient\Runtime\Client\Endpoint
+class GetFlow extends \App\Generated\PdpFlowClient\Runtime\Client\BaseEndpoint implements \App\Generated\PdpFlowClient\Runtime\Client\Endpoint
 {
     protected $flowId;
     protected $accept;
@@ -32,7 +32,7 @@ class GetFlow extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\BaseEndpo
         $this->queryParameters = $queryParameters;
         $this->accept = $accept;
     }
-    use \PdpLibre\Generated\PdpFlowClient\Runtime\Client\EndpointTrait;
+    use \App\Generated\PdpFlowClient\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'GET';
@@ -65,12 +65,12 @@ class GetFlow extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\BaseEndpo
     /**
      * {@inheritdoc}
      *
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowBadRequestException
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowForbiddenException
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowNotFoundException
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowServiceUnavailableException
+     * @throws \App\Generated\PdpFlowClient\Exception\GetFlowBadRequestException
+     * @throws \App\Generated\PdpFlowClient\Exception\GetFlowUnauthorizedException
+     * @throws \App\Generated\PdpFlowClient\Exception\GetFlowForbiddenException
+     * @throws \App\Generated\PdpFlowClient\Exception\GetFlowNotFoundException
+     * @throws \App\Generated\PdpFlowClient\Exception\GetFlowInternalServerErrorException
+     * @throws \App\Generated\PdpFlowClient\Exception\GetFlowServiceUnavailableException
      *
      * @return null
      */
@@ -81,22 +81,22 @@ class GetFlow extends \PdpLibre\Generated\PdpFlowClient\Runtime\Client\BaseEndpo
         if (200 === $status) {
         }
         if (is_null($contentType) === false && (400 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowBadRequestException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\GetFlowBadRequestException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
         if (is_null($contentType) === false && (401 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowUnauthorizedException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\GetFlowUnauthorizedException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
         if (is_null($contentType) === false && (403 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowForbiddenException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\GetFlowForbiddenException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
         if (is_null($contentType) === false && (404 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowNotFoundException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\GetFlowNotFoundException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
         if (is_null($contentType) === false && (500 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowInternalServerErrorException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\GetFlowInternalServerErrorException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
         if (is_null($contentType) === false && (503 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            throw new \PdpLibre\Generated\PdpFlowClient\Exception\GetFlowServiceUnavailableException($serializer->deserialize($body, 'PdpLibre\Generated\PdpFlowClient\Model\Error', 'json'), $response);
+            throw new \App\Generated\PdpFlowClient\Exception\GetFlowServiceUnavailableException($serializer->deserialize($body, 'App\Generated\PdpFlowClient\Model\Error', 'json'), $response);
         }
     }
     public function getAuthenticationScopes(): array

@@ -1,8 +1,8 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint;
+namespace App\Generated\PdpDirectoryClient\Endpoint;
 
-class GetSirenCodeInseeBySiren extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\BaseEndpoint implements \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\Endpoint
+class GetSirenCodeInseeBySiren extends \App\Generated\PdpDirectoryClient\Runtime\Client\BaseEndpoint implements \App\Generated\PdpDirectoryClient\Runtime\Client\Endpoint
 {
     protected $siren;
     protected $accept;
@@ -26,7 +26,7 @@ class GetSirenCodeInseeBySiren extends \PdpLibre\Generated\PdpFPdpDirectoryClien
         $this->headerParameters = $headerParameters;
         $this->accept = $accept;
     }
-    use \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\EndpointTrait;
+    use \App\Generated\PdpDirectoryClient\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'GET';
@@ -68,58 +68,58 @@ class GetSirenCodeInseeBySiren extends \PdpLibre\Generated\PdpFPdpDirectoryClien
     /**
      * {@inheritdoc}
      *
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenBadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenNotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenRequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenUnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenTooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenNotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadHistory|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error
+     * @return null|\App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadHistory|\App\Generated\PdpDirectoryClient\Model\Error
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (is_null($contentType) === false && (200 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadHistory', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadHistory', 'json');
         }
         if (400 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenBadRequestException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenBadRequestException($response);
         }
         if (401 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenUnauthorizedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenUnauthorizedException($response);
         }
         if (403 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenForbiddenException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenForbiddenException($response);
         }
         if (404 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenNotFoundException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenNotFoundException($response);
         }
         if (408 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenRequestTimeoutException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenRequestTimeoutException($response);
         }
         if (422 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenUnprocessableEntityException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenUnprocessableEntityException($response);
         }
         if (429 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenTooManyRequestsException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenTooManyRequestsException($response);
         }
         if (500 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenInternalServerErrorException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenInternalServerErrorException($response);
         }
         if (501 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenNotImplementedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenNotImplementedException($response);
         }
         if (503 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\GetSirenCodeInseeBySirenServiceUnavailableException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\GetSirenCodeInseeBySirenServiceUnavailableException($response);
         }
         if (mb_strpos($contentType, 'application/problem+json') !== false) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\Error', 'json');
         }
     }
     public function getAuthenticationScopes(): array

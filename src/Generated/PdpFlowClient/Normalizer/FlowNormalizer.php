@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFlowClient\Normalizer;
+namespace App\Generated\PdpFlowClient\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use PdpLibre\Generated\PdpFlowClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFlowClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpFlowClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpFlowClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -19,11 +19,11 @@ class FlowNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \PdpLibre\Generated\PdpFlowClient\Model\Flow::class;
+        return $type === \App\Generated\PdpFlowClient\Model\Flow::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \PdpLibre\Generated\PdpFlowClient\Model\Flow::class;
+        return is_object($data) && get_class($data) === \App\Generated\PdpFlowClient\Model\Flow::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
@@ -33,7 +33,7 @@ class FlowNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \PdpLibre\Generated\PdpFlowClient\Model\Flow();
+        $object = new \App\Generated\PdpFlowClient\Model\Flow();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -74,7 +74,7 @@ class FlowNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
             unset($data['attachmentNumber']);
         }
         if (\array_key_exists('acknowledgement', $data)) {
-            $object->setAcknowledgement($this->denormalizer->denormalize($data['acknowledgement'], \PdpLibre\Generated\PdpFlowClient\Model\Acknowledgement::class, 'json', $context));
+            $object->setAcknowledgement($this->denormalizer->denormalize($data['acknowledgement'], \App\Generated\PdpFlowClient\Model\Acknowledgement::class, 'json', $context));
             unset($data['acknowledgement']);
         }
         foreach ($data as $key => $value) {
@@ -126,6 +126,6 @@ class FlowNormalizer implements DenormalizerInterface, NormalizerInterface, Deno
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\PdpLibre\Generated\PdpFlowClient\Model\Flow::class => false];
+        return [\App\Generated\PdpFlowClient\Model\Flow::class => false];
     }
 }

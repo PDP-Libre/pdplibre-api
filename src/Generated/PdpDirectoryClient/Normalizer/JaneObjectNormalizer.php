@@ -1,9 +1,9 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Normalizer;
 
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -18,147 +18,147 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
     use ValidatorTrait;
     protected $normalizers = [
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiren::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSirenNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiren::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSirenNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadHistory::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\LegalUnitPayloadHistoryNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadHistory::class => \App\Generated\PdpDirectoryClient\Normalizer\LegalUnitPayloadHistoryNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\ErrorNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\Error::class => \App\Generated\PdpDirectoryClient\Normalizer\ErrorNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiret::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSiretNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiret::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSiretNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistoryUle::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\FacilityPayloadHistoryUleNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistoryUle::class => \App\Generated\PdpDirectoryClient\Normalizer\FacilityPayloadHistoryUleNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistory::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\FacilityPayloadHistoryNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistory::class => \App\Generated\PdpDirectoryClient\Normalizer\FacilityPayloadHistoryNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateRoutingCodeBody::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\CreateRoutingCodeBodyNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\CreateRoutingCodeBody::class => \App\Generated\PdpDirectoryClient\Normalizer\CreateRoutingCodeBodyNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearch::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\RoutingCodeSearchNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearch::class => \App\Generated\PdpDirectoryClient\Normalizer\RoutingCodeSearchNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\RoutingCodePayloadHistoryLegalUnitFacilityNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility::class => \App\Generated\PdpDirectoryClient\Normalizer\RoutingCodePayloadHistoryLegalUnitFacilityNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistory::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\RoutingCodePayloadHistoryNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistory::class => \App\Generated\PdpDirectoryClient\Normalizer\RoutingCodePayloadHistoryNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePutRoutingCodeBody::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\UpdatePutRoutingCodeBodyNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\UpdatePutRoutingCodeBody::class => \App\Generated\PdpDirectoryClient\Normalizer\UpdatePutRoutingCodeBodyNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePatchRoutingCodeBody::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\UpdatePatchRoutingCodeBodyNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\UpdatePatchRoutingCodeBody::class => \App\Generated\PdpDirectoryClient\Normalizer\UpdatePatchRoutingCodeBodyNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLine::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchDirectoryLineNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLine::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchDirectoryLineNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCode::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCode::class => \App\Generated\PdpDirectoryClient\Normalizer\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateDirectoryLineBody::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\CreateDirectoryLineBodyNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\CreateDirectoryLineBody::class => \App\Generated\PdpDirectoryClient\Normalizer\CreateDirectoryLineBodyNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistory::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\DirectoryLinePayloadHistoryNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistory::class => \App\Generated\PdpDirectoryClient\Normalizer\DirectoryLinePayloadHistoryNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePutDirectoryLineBody::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\UpdatePutDirectoryLineBodyNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\UpdatePutDirectoryLineBody::class => \App\Generated\PdpDirectoryClient\Normalizer\UpdatePutDirectoryLineBodyNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePatchDirectoryLineBody::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\UpdatePatchDirectoryLineBodyNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\UpdatePatchDirectoryLineBody::class => \App\Generated\PdpDirectoryClient\Normalizer\UpdatePatchDirectoryLineBodyNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\AddressRead::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\AddressReadNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\AddressRead::class => \App\Generated\PdpDirectoryClient\Normalizer\AddressReadNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\AddressEdit::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\AddressEditNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\AddressEdit::class => \App\Generated\PdpDirectoryClient\Normalizer\AddressEditNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\AddressPut::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\AddressPutNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\AddressPut::class => \App\Generated\PdpDirectoryClient\Normalizer\AddressPutNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\AddressPatch::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\AddressPatchNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\AddressPatch::class => \App\Generated\PdpDirectoryClient\Normalizer\AddressPatchNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\HistoryRead::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\HistoryReadNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\HistoryRead::class => \App\Generated\PdpDirectoryClient\Normalizer\HistoryReadNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadIncludedNoSiren::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\LegalUnitPayloadIncludedNoSirenNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadIncludedNoSiren::class => \App\Generated\PdpDirectoryClient\Normalizer\LegalUnitPayloadIncludedNoSirenNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadIncluded::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\LegalUnitPayloadIncludedNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadIncluded::class => \App\Generated\PdpDirectoryClient\Normalizer\LegalUnitPayloadIncludedNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadIncluded::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\FacilityPayloadIncludedNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\FacilityPayloadIncluded::class => \App\Generated\PdpDirectoryClient\Normalizer\FacilityPayloadIncludedNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SirenSearchPost200Response::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SirenSearchPost200ResponseNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SirenSearchPost200Response::class => \App\Generated\PdpDirectoryClient\Normalizer\SirenSearchPost200ResponseNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SiretSearchPost200Response::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SiretSearchPost200ResponseNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SiretSearchPost200Response::class => \App\Generated\PdpDirectoryClient\Normalizer\SiretSearchPost200ResponseNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePost201Response::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\RoutingCodePost201ResponseNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\RoutingCodePost201Response::class => \App\Generated\PdpDirectoryClient\Normalizer\RoutingCodePost201ResponseNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchPost200Response::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\RoutingCodeSearchPost200ResponseNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchPost200Response::class => \App\Generated\PdpDirectoryClient\Normalizer\RoutingCodeSearchPost200ResponseNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLineSearchPost200Response::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\DirectoryLineSearchPost200ResponseNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\DirectoryLineSearchPost200Response::class => \App\Generated\PdpDirectoryClient\Normalizer\DirectoryLineSearchPost200ResponseNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePost201Response::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\DirectoryLinePost201ResponseNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\DirectoryLinePost201Response::class => \App\Generated\PdpDirectoryClient\Normalizer\DirectoryLinePost201ResponseNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersSiren::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSirenFiltersSirenNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersSiren::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSirenFiltersSirenNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersBusinessName::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSirenFiltersBusinessNameNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersBusinessName::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSirenFiltersBusinessNameNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersEntityType::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSirenFiltersEntityTypeNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersEntityType::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSirenFiltersEntityTypeNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersAdministrativeStatus::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSirenFiltersAdministrativeStatusNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersAdministrativeStatus::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSirenFiltersAdministrativeStatusNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersHistoryObservationDate::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSirenFiltersHistoryObservationDateNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersHistoryObservationDate::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSirenFiltersHistoryObservationDateNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersHistorySearchStartDate::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSirenFiltersHistorySearchStartDateNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersHistorySearchStartDate::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSirenFiltersHistorySearchStartDateNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersHistorySearchEndDate::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSirenFiltersHistorySearchEndDateNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersHistorySearchEndDate::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSirenFiltersHistorySearchEndDateNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersHistoryAuditMode::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSirenFiltersHistoryAuditModeNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersHistoryAuditMode::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSirenFiltersHistoryAuditModeNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersHistory::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSirenFiltersHistoryNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersHistory::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSirenFiltersHistoryNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFilters::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSirenFiltersNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSirenFilters::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSirenFiltersNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenSortingInner::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSirenSortingInnerNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSirenSortingInner::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSirenSortingInnerNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadHistoryHistory::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\LegalUnitPayloadHistoryHistoryNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadHistoryHistory::class => \App\Generated\PdpDirectoryClient\Normalizer\LegalUnitPayloadHistoryHistoryNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersSiret::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSiretFiltersSiretNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersSiret::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSiretFiltersSiretNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersFacilityType::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSiretFiltersFacilityTypeNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersFacilityType::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSiretFiltersFacilityTypeNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersName::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSiretFiltersNameNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersName::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSiretFiltersNameNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersAddressLines::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSiretFiltersAddressLinesNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersAddressLines::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSiretFiltersAddressLinesNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersPostalCode::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSiretFiltersPostalCodeNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersPostalCode::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSiretFiltersPostalCodeNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersCountrySubdivision::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSiretFiltersCountrySubdivisionNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersCountrySubdivision::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSiretFiltersCountrySubdivisionNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersLocality::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSiretFiltersLocalityNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersLocality::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSiretFiltersLocalityNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersAdministrativeStatus::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSiretFiltersAdministrativeStatusNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersAdministrativeStatus::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSiretFiltersAdministrativeStatusNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersHistory::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSiretFiltersHistoryNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersHistory::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSiretFiltersHistoryNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFilters::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSiretFiltersNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiretFilters::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSiretFiltersNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretSortingInner::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchSiretSortingInnerNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchSiretSortingInner::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchSiretSortingInnerNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistoryUleB2gAdditionalData::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\FacilityPayloadHistoryUleB2gAdditionalDataNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistoryUleB2gAdditionalData::class => \App\Generated\PdpDirectoryClient\Normalizer\FacilityPayloadHistoryUleB2gAdditionalDataNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\RoutingCodeSearchFiltersRoutingIdentifierNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier::class => \App\Generated\PdpDirectoryClient\Normalizer\RoutingCodeSearchFiltersRoutingIdentifierNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingCodeName::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\RoutingCodeSearchFiltersRoutingCodeNameNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingCodeName::class => \App\Generated\PdpDirectoryClient\Normalizer\RoutingCodeSearchFiltersRoutingCodeNameNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFiltersAdministrativeStatus::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\RoutingCodeSearchFiltersAdministrativeStatusNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFiltersAdministrativeStatus::class => \App\Generated\PdpDirectoryClient\Normalizer\RoutingCodeSearchFiltersAdministrativeStatusNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFilters::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\RoutingCodeSearchFiltersNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFilters::class => \App\Generated\PdpDirectoryClient\Normalizer\RoutingCodeSearchFiltersNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchSortingInner::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\RoutingCodeSearchSortingInnerNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchSortingInner::class => \App\Generated\PdpDirectoryClient\Normalizer\RoutingCodeSearchSortingInnerNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFiltersAddressingIdentifier::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchDirectoryLineFiltersAddressingIdentifierNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFiltersAddressingIdentifier::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchDirectoryLineFiltersAddressingIdentifierNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFiltersPlatformRegistrationNumber::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchDirectoryLineFiltersPlatformRegistrationNumberNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFiltersPlatformRegistrationNumber::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchDirectoryLineFiltersPlatformRegistrationNumberNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFiltersAddressingSuffix::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchDirectoryLineFiltersAddressingSuffixNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFiltersAddressingSuffix::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchDirectoryLineFiltersAddressingSuffixNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFilters::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchDirectoryLineFiltersNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFilters::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchDirectoryLineFiltersNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineSortingInner::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\SearchDirectoryLineSortingInnerNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineSortingInner::class => \App\Generated\PdpDirectoryClient\Normalizer\SearchDirectoryLineSortingInnerNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCodeNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode::class => \App\Generated\PdpDirectoryClient\Normalizer\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCodeNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodePlateform::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodePlateformNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodePlateform::class => \App\Generated\PdpDirectoryClient\Normalizer\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodePlateformNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateDirectoryLineBodyPeriod::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\CreateDirectoryLineBodyPeriodNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\CreateDirectoryLineBodyPeriod::class => \App\Generated\PdpDirectoryClient\Normalizer\CreateDirectoryLineBodyPeriodNormalizer::class,
         
-        \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateDirectoryLineBodyAddressingInformation::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer\CreateDirectoryLineBodyAddressingInformationNormalizer::class,
+        \App\Generated\PdpDirectoryClient\Model\CreateDirectoryLineBodyAddressingInformation::class => \App\Generated\PdpDirectoryClient\Normalizer\CreateDirectoryLineBodyAddressingInformationNormalizer::class,
         
-        \Jane\Component\JsonSchemaRuntime\Reference::class => \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\ReferenceNormalizer::class,
+        \Jane\Component\JsonSchemaRuntime\Reference::class => \App\Generated\PdpDirectoryClient\Runtime\Normalizer\ReferenceNormalizer::class,
     ], $normalizersCache = [];
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
@@ -196,76 +196,76 @@ class JaneObjectNormalizer implements DenormalizerInterface, NormalizerInterface
     {
         return [
             
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiren::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadHistory::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiret::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistoryUle::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistory::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateRoutingCodeBody::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearch::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePayloadHistory::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePutRoutingCodeBody::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePatchRoutingCodeBody::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLine::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCode::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateDirectoryLineBody::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistory::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePutDirectoryLineBody::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\UpdatePatchDirectoryLineBody::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\AddressRead::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\AddressEdit::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\AddressPut::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\AddressPatch::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\HistoryRead::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadIncludedNoSiren::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadIncluded::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadIncluded::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SirenSearchPost200Response::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SiretSearchPost200Response::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePost201Response::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchPost200Response::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLineSearchPost200Response::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePost201Response::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersSiren::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersBusinessName::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersEntityType::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersAdministrativeStatus::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersHistoryObservationDate::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersHistorySearchStartDate::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersHistorySearchEndDate::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersHistoryAuditMode::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFiltersHistory::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenFilters::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSirenSortingInner::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\LegalUnitPayloadHistoryHistory::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersSiret::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersFacilityType::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersName::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersAddressLines::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersPostalCode::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersCountrySubdivision::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersLocality::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersAdministrativeStatus::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFiltersHistory::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretFilters::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchSiretSortingInner::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistoryUleB2gAdditionalData::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingCodeName::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFiltersAdministrativeStatus::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchFilters::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodeSearchSortingInner::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFiltersAddressingIdentifier::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFiltersPlatformRegistrationNumber::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFiltersAddressingSuffix::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineFilters::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\SearchDirectoryLineSortingInner::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodePlateform::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateDirectoryLineBodyPeriod::class => false,
-            \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateDirectoryLineBodyAddressingInformation::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiren::class => false,
+            \App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadHistory::class => false,
+            \App\Generated\PdpDirectoryClient\Model\Error::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiret::class => false,
+            \App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistoryUle::class => false,
+            \App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistory::class => false,
+            \App\Generated\PdpDirectoryClient\Model\CreateRoutingCodeBody::class => false,
+            \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearch::class => false,
+            \App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistoryLegalUnitFacility::class => false,
+            \App\Generated\PdpDirectoryClient\Model\RoutingCodePayloadHistory::class => false,
+            \App\Generated\PdpDirectoryClient\Model\UpdatePutRoutingCodeBody::class => false,
+            \App\Generated\PdpDirectoryClient\Model\UpdatePatchRoutingCodeBody::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLine::class => false,
+            \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCode::class => false,
+            \App\Generated\PdpDirectoryClient\Model\CreateDirectoryLineBody::class => false,
+            \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistory::class => false,
+            \App\Generated\PdpDirectoryClient\Model\UpdatePutDirectoryLineBody::class => false,
+            \App\Generated\PdpDirectoryClient\Model\UpdatePatchDirectoryLineBody::class => false,
+            \App\Generated\PdpDirectoryClient\Model\AddressRead::class => false,
+            \App\Generated\PdpDirectoryClient\Model\AddressEdit::class => false,
+            \App\Generated\PdpDirectoryClient\Model\AddressPut::class => false,
+            \App\Generated\PdpDirectoryClient\Model\AddressPatch::class => false,
+            \App\Generated\PdpDirectoryClient\Model\HistoryRead::class => false,
+            \App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadIncludedNoSiren::class => false,
+            \App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadIncluded::class => false,
+            \App\Generated\PdpDirectoryClient\Model\FacilityPayloadIncluded::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SirenSearchPost200Response::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SiretSearchPost200Response::class => false,
+            \App\Generated\PdpDirectoryClient\Model\RoutingCodePost201Response::class => false,
+            \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchPost200Response::class => false,
+            \App\Generated\PdpDirectoryClient\Model\DirectoryLineSearchPost200Response::class => false,
+            \App\Generated\PdpDirectoryClient\Model\DirectoryLinePost201Response::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersSiren::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersBusinessName::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersEntityType::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersAdministrativeStatus::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersHistoryObservationDate::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersHistorySearchStartDate::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersHistorySearchEndDate::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersHistoryAuditMode::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSirenFiltersHistory::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSirenFilters::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSirenSortingInner::class => false,
+            \App\Generated\PdpDirectoryClient\Model\LegalUnitPayloadHistoryHistory::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersSiret::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersFacilityType::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersName::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersAddressLines::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersPostalCode::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersCountrySubdivision::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersLocality::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersAdministrativeStatus::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiretFiltersHistory::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiretFilters::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchSiretSortingInner::class => false,
+            \App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistoryUleB2gAdditionalData::class => false,
+            \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingIdentifier::class => false,
+            \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFiltersRoutingCodeName::class => false,
+            \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFiltersAdministrativeStatus::class => false,
+            \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchFilters::class => false,
+            \App\Generated\PdpDirectoryClient\Model\RoutingCodeSearchSortingInner::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFiltersAddressingIdentifier::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFiltersPlatformRegistrationNumber::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFiltersAddressingSuffix::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineFilters::class => false,
+            \App\Generated\PdpDirectoryClient\Model\SearchDirectoryLineSortingInner::class => false,
+            \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodeRoutingCode::class => false,
+            \App\Generated\PdpDirectoryClient\Model\DirectoryLinePayloadHistoryLegalUnitFacilityRoutingCodePlateform::class => false,
+            \App\Generated\PdpDirectoryClient\Model\CreateDirectoryLineBodyPeriod::class => false,
+            \App\Generated\PdpDirectoryClient\Model\CreateDirectoryLineBodyAddressingInformation::class => false,
             \Jane\Component\JsonSchemaRuntime\Reference::class => false,
         ];
     }

@@ -1,10 +1,10 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Normalizer;
+namespace App\Generated\PdpDirectoryClient\Normalizer;
 
 use Jane\Component\JsonSchemaRuntime\Reference;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\CheckArray;
-use PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\CheckArray;
+use App\Generated\PdpDirectoryClient\Runtime\Normalizer\ValidatorTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\DenormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
@@ -19,11 +19,11 @@ class FacilityPayloadHistoryNormalizer implements DenormalizerInterface, Normali
     use ValidatorTrait;
     public function supportsDenormalization(mixed $data, string $type, ?string $format = null, array $context = []): bool
     {
-        return $type === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistory::class;
+        return $type === \App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistory::class;
     }
     public function supportsNormalization(mixed $data, ?string $format = null, array $context = []): bool
     {
-        return is_object($data) && get_class($data) === \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistory::class;
+        return is_object($data) && get_class($data) === \App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistory::class;
     }
     public function denormalize(mixed $data, string $type, ?string $format = null, array $context = []): mixed
     {
@@ -33,7 +33,7 @@ class FacilityPayloadHistoryNormalizer implements DenormalizerInterface, Normali
         if (isset($data['$recursiveRef'])) {
             return new Reference($data['$recursiveRef'], $context['document-origin']);
         }
-        $object = new \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistory();
+        $object = new \App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistory();
         if (null === $data || false === \is_array($data)) {
             return $object;
         }
@@ -62,15 +62,15 @@ class FacilityPayloadHistoryNormalizer implements DenormalizerInterface, Normali
             unset($data['administrativeStatus']);
         }
         if (\array_key_exists('address', $data)) {
-            $object->setAddress($this->denormalizer->denormalize($data['address'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\AddressRead::class, 'json', $context));
+            $object->setAddress($this->denormalizer->denormalize($data['address'], \App\Generated\PdpDirectoryClient\Model\AddressRead::class, 'json', $context));
             unset($data['address']);
         }
         if (\array_key_exists('history', $data)) {
-            $object->setHistory($this->denormalizer->denormalize($data['history'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\HistoryRead::class, 'json', $context));
+            $object->setHistory($this->denormalizer->denormalize($data['history'], \App\Generated\PdpDirectoryClient\Model\HistoryRead::class, 'json', $context));
             unset($data['history']);
         }
         if (\array_key_exists('b2gAdditionalData', $data)) {
-            $object->setB2gAdditionalData($this->denormalizer->denormalize($data['b2gAdditionalData'], \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistoryUleB2gAdditionalData::class, 'json', $context));
+            $object->setB2gAdditionalData($this->denormalizer->denormalize($data['b2gAdditionalData'], \App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistoryUleB2gAdditionalData::class, 'json', $context));
             unset($data['b2gAdditionalData']);
         }
         foreach ($data as $key => $value) {
@@ -119,6 +119,6 @@ class FacilityPayloadHistoryNormalizer implements DenormalizerInterface, Normali
     }
     public function getSupportedTypes(?string $format = null): array
     {
-        return [\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\FacilityPayloadHistory::class => false];
+        return [\App\Generated\PdpDirectoryClient\Model\FacilityPayloadHistory::class => false];
     }
 }

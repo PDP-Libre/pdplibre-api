@@ -1,27 +1,27 @@
 <?php
 
-namespace PdpLibre\Generated\PdpFPdpDirectoryClient\Endpoint;
+namespace App\Generated\PdpDirectoryClient\Endpoint;
 
-class PostRoutingCode extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\BaseEndpoint implements \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\Endpoint
+class PostRoutingCode extends \App\Generated\PdpDirectoryClient\Runtime\Client\BaseEndpoint implements \App\Generated\PdpDirectoryClient\Runtime\Client\Endpoint
 {
     protected $accept;
     /**
      * Creating a routing code.
      *
-     * @param \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateRoutingCodeBody $requestBody 
+     * @param \App\Generated\PdpDirectoryClient\Model\CreateRoutingCodeBody $requestBody 
      * @param array $headerParameters {
      *     @var string $Accept-Language Specifies the language in which the resource is requested.
      *     @var array $PPF-affiliations Indicates the user's active affiliations in SIREN/SIRET/Service format. Only the SIREN is mandatory.
      * }
      * @param array $accept Accept content header application/json|application/problem+json
      */
-    public function __construct(\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateRoutingCodeBody $requestBody, array $headerParameters = [], array $accept = [])
+    public function __construct(\App\Generated\PdpDirectoryClient\Model\CreateRoutingCodeBody $requestBody, array $headerParameters = [], array $accept = [])
     {
         $this->body = $requestBody;
         $this->headerParameters = $headerParameters;
         $this->accept = $accept;
     }
-    use \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime\Client\EndpointTrait;
+    use \App\Generated\PdpDirectoryClient\Runtime\Client\EndpointTrait;
     public function getMethod(): string
     {
         return 'POST';
@@ -32,7 +32,7 @@ class PostRoutingCode extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null): array
     {
-        if ($this->body instanceof \PdpLibre\Generated\PdpFPdpDirectoryClient\Model\CreateRoutingCodeBody) {
+        if ($this->body instanceof \App\Generated\PdpDirectoryClient\Model\CreateRoutingCodeBody) {
             return [['Content-Type' => ['application/json']], $serializer->serialize($this->body, 'json')];
         }
         return [[], null];
@@ -57,58 +57,58 @@ class PostRoutingCode extends \PdpLibre\Generated\PdpFPdpDirectoryClient\Runtime
     /**
      * {@inheritdoc}
      *
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeBadRequestException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeUnauthorizedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeForbiddenException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeNotFoundException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeRequestTimeoutException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeUnprocessableEntityException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeTooManyRequestsException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeInternalServerErrorException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeNotImplementedException
-     * @throws \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeServiceUnavailableException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeBadRequestException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeUnauthorizedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeForbiddenException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeNotFoundException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeRequestTimeoutException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeUnprocessableEntityException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeTooManyRequestsException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeInternalServerErrorException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeNotImplementedException
+     * @throws \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeServiceUnavailableException
      *
-     * @return null|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePost201Response|\PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error
+     * @return null|\App\Generated\PdpDirectoryClient\Model\RoutingCodePost201Response|\App\Generated\PdpDirectoryClient\Model\Error
      */
     protected function transformResponseBody(\Psr\Http\Message\ResponseInterface $response, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         $status = $response->getStatusCode();
         $body = (string) $response->getBody();
         if (is_null($contentType) === false && (201 === $status && mb_strpos($contentType, 'application/json') !== false)) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\RoutingCodePost201Response', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\RoutingCodePost201Response', 'json');
         }
         if (400 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeBadRequestException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeBadRequestException($response);
         }
         if (401 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeUnauthorizedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeUnauthorizedException($response);
         }
         if (403 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeForbiddenException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeForbiddenException($response);
         }
         if (404 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeNotFoundException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeNotFoundException($response);
         }
         if (408 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeRequestTimeoutException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeRequestTimeoutException($response);
         }
         if (422 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeUnprocessableEntityException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeUnprocessableEntityException($response);
         }
         if (429 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeTooManyRequestsException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeTooManyRequestsException($response);
         }
         if (500 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeInternalServerErrorException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeInternalServerErrorException($response);
         }
         if (501 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeNotImplementedException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeNotImplementedException($response);
         }
         if (503 === $status) {
-            throw new \PdpLibre\Generated\PdpFPdpDirectoryClient\Exception\PostRoutingCodeServiceUnavailableException($response);
+            throw new \App\Generated\PdpDirectoryClient\Exception\PostRoutingCodeServiceUnavailableException($response);
         }
         if (mb_strpos($contentType, 'application/problem+json') !== false) {
-            return $serializer->deserialize($body, 'PdpLibre\Generated\PdpFPdpDirectoryClient\Model\Error', 'json');
+            return $serializer->deserialize($body, 'App\Generated\PdpDirectoryClient\Model\Error', 'json');
         }
     }
     public function getAuthenticationScopes(): array
