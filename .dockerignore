@@ -1,0 +1,11 @@
+
+*
+!bin/
+!config/
+!public/
+!src/
+!tests/
+!.env
+!composer.*
+!nginx.conf
+!symfony.lock
