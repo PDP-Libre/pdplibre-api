@@ -1,0 +1,104 @@
+{
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.4",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "api-platform/doctrine-orm": "^4.3.4",
+        "api-platform/symfony": "^4.3.4",
+        "doctrine/doctrine-bundle": "^3.2.2",
+        "doctrine/doctrine-migrations-bundle": "^4.0.0",
+        "doctrine/orm": "^3.6.3",
+        "league/flysystem": "*",
+        "league/flysystem-bundle": "*",
+        "nelmio/cors-bundle": "^2.6.1",
+        "phpstan/phpdoc-parser": "^2.3.2",
+        "runtime/frankenphp-symfony": "^1.0",
+        "symfony/asset": "7.4.*",
+        "symfony/console": "7.4.*",
+        "symfony/dotenv": "7.4.*",
+        "symfony/expression-language": "7.4.*",
+        "symfony/flex": "^2.10",
+        "symfony/framework-bundle": "7.4.*",
+        "symfony/mercure-bundle": "^v0.4.2",
+        "symfony/messenger": "*",
+        "symfony/monolog-bundle": "^v4.0.2",
+        "symfony/property-access": "7.4.*",
+        "symfony/property-info": "7.4.*",
+        "symfony/runtime": "7.4.*",
+        "symfony/security-bundle": "7.4.*",
+        "symfony/serializer": "7.4.*",
+        "symfony/translation": "*",
+        "symfony/twig-bundle": "7.4.*",
+        "symfony/validator": "7.4.*",
+        "symfony/yaml": "7.4.*"
+    },
+    "require-dev": {
+        "api-platform/schema-generator": "^5.2.5",
+        "symfony/browser-kit": "7.4.*",
+        "symfony/css-selector": "7.4.*",
+        "symfony/debug-bundle": "7.4.*",
+        "symfony/maker-bundle": "^1.67",
+        "symfony/phpunit-bridge": "7.4.*",
+        "symfony/stopwatch": "7.4.*",
+        "symfony/var-dumper": "7.4.*",
+        "symfony/web-profiler-bundle": "7.4.*"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true,
+        "allow-plugins": {
+            "symfony/flex": true,
+            "symfony/runtime": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "replace": {
+        "paragonie/random_compat": "2.*",
+        "symfony/polyfill-ctype": "*",
+        "symfony/polyfill-iconv": "*",
+        "symfony/polyfill-intl-grapheme": "*",
+        "symfony/polyfill-intl-normalizer": "*",
+        "symfony/polyfill-mbstring": "*",
+        "symfony/polyfill-php84": "*",
+        "symfony/polyfill-php83": "*",
+        "symfony/polyfill-php82": "*",
+        "symfony/polyfill-php81": "*",
+        "symfony/polyfill-php80": "*"
+    },
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        },
+        "post-install-cmd": [
+            "@auto-scripts"
+        ],
+        "post-update-cmd": [
+            "@auto-scripts"
+        ]
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "7.4.*",
+            "docker": false
+        }
+    }
+}
